@@ -1,0 +1,2 @@
+#!/bin/bash
+(while true; do cat radio_list.txt | shuf; done) | pico8 -root_path "$(pwd)/manual_carts" -run manual_carts/radico8.p8

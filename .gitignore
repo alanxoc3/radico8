@@ -1,0 +1,6 @@
+*.bin
+*.p8l
+*.p8
+*.p8.png
+.*.lua
+!manual_carts/*.p8

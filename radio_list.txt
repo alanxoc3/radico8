@@ -1,0 +1,8 @@
+zeldo.p8:8
+zeldo.p8:16
+zeldo.p8:21
+zeldo.p8:32
+zeldo.p8:40
+zeldo.p8:48
+zeldo.p8:53
+ascent-0.p8.png:0
