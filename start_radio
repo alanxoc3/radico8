@@ -1,2 +1,2 @@
 #!/bin/bash
-(while true; do cat radio_list.txt | shuf; done) | pico8 -root_path "$(pwd)/manual_carts" -run manual_carts/radico8.p8
+(while true; do cat manual_carts/radio_list.txt | shuf; done) | xvfb-run /opt/pico8/pico8 -root_path "$(pwd)/manual_carts" -run manual_carts/radico8.p8
