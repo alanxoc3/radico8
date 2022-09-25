@@ -1,5 +1,7 @@
 #!/bin/bash
 # Requires the source password to be exposed in an environment variable called "PASS".
+SERVER="$1"
+PORT="$2"
 start_radio &
 pulseaudio -D --exit-idle-time=-1
-ffmpeg -f alsa -i default -f ogg -content_type audio/ogg icecast://source:"$PASS"@xoc3.io:9000/radico8.ogg
+ffmpeg -f alsa -i default -f ogg -content_type audio/ogg icecast://source:"$PASS"@"$SERVER":"$PORT"/radico8.ogg

@@ -1,0 +1,16 @@
+#!/bin/bash
+# Expect password in PASS variable.
+if [[ "$#" -ne 3 ]]; then echo 'Usage: PASS=<password> start_docker <pico-8-path> <server> <port>'; exit 1; fi
+if [[ -z "$PASS" ]]; then echo 'Usage: PASS=<password> start_docker <pico-8-path> <server> <port>'; exit 1; fi
+
+# path to the pico8 binary
+PICO_PATH="$1"
+
+# port icecast runs on
+SERVER="$2"
+
+# port icecast runs on
+PORT="$3"
+
+docker build . -t radico8
+docker run -it -e "PASS=$PASS" -v "$PICO_PATH":/opt/pico8:ro -v $(pwd)/manual_carts:/manual_carts:ro radico8 "$SERVER" "$PORT"
