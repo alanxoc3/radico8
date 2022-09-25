@@ -13,4 +13,5 @@ SERVER="$2"
 PORT="$3"
 
 docker build . -t radico8
-docker run -it -e "PASS=$PASS" -v "$PICO_PATH":/opt/pico8:ro -v $(pwd)/manual_carts:/manual_carts:ro radico8 "$SERVER" "$PORT"
+docker run --add-host=host.docker.internal:host-gateway -it -e "PASS=$PASS" -v "$PICO_PATH":/opt/pico8:ro -v $(pwd)/manual_carts:/manual_carts:ro radico8 "$SERVER" "$PORT"
+

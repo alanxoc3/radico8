@@ -3,6 +3,7 @@ A pico8 web radio.
 
 ## random notes to delete soon
 ```
+sudo ufw allow in on docker0 to any port 8010
 docker build . -t radico8
 docker run -it -e PASS=<password> -v /opt/pico-8:/opt/pico8:ro -v $(pwd)/manual_carts:/manual_carts:ro radico8
 
