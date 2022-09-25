@@ -3,6 +3,9 @@ A pico8 web radio.
 
 ## random notes to delete soon
 ```
+docker build . -t radico8
+docker run -it -e PASS=<password> -v /opt/pico-8:/opt/pico8:ro -v $(pwd)/manual_carts:/manual_carts:ro radico8
+
 ffmpeg -f pulse -i 'alsa_output.pci-0000_00_0e.0.analog-stereo.monitor' -f ogg -content_type audio/ogg icecast://source:$(pass show radico8.xoc3.io/source)@xoc3.io:8000/radico8.ogg
 ffmpeg -f alsa -i default -f ogg -content_type audio/ogg icecast://source:"$PASS"@xoc3.io:8000/radico8.ogg
 
