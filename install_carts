@@ -1,8 +1,8 @@
-#/bin/bash
-for cart in $(cat radio_list.txt | awk -F : '{print $1}' | grep '\.p8\.png' | sort -u); do
-    if [[ ! -f "manual_carts/$cart" ]]; then
+#!/bin/bash
+for cart in $(cat playlist.txt | awk -F : '{print $1}' | grep '\.p8\.png' | sort -u); do
+    if [[ ! -f "cartridges/$cart" ]]; then
         folder=$(head -c 2 <<< "$cart")
-        wget "https://www.lexaloffle.com/bbs/cposts/$folder/$cart" -O manual_carts/"$cart"
+        wget "https://www.lexaloffle.com/bbs/cposts/$folder/$cart" -O cartridges/"$cart"
     fi
 done
 

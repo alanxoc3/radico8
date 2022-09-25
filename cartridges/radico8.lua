@@ -10,7 +10,7 @@ function _init()
 end
 
 function load_song()
-    g_cartname, g_songname, g_tracknum = get_next_cart()
+    g_cartname, g_tracknum = get_next_cart()
     g_song_time = 0
     g_cur_track = g_tracknum
     g_tracks = {[g_cur_track]=true}
@@ -19,7 +19,7 @@ function load_song()
     -- reload current cart first because it has a stop at every track, ensuring bad files won't be played
     reload(0x3100, 0x3100, 0x1200)
     reload(0x3100, 0x3100, 0x1200, g_cartname)
-    printh("playing: "..g_songname.. " - "..g_tracknum)
+    printh(g_cartname..":"..g_tracknum)
     music(g_tracknum, 1000*FADE_IN_LENGTH)
 end
 
@@ -49,18 +49,6 @@ function _update60()
     if g_song_time           then           g_song_time += 1 end
 end
 
-function _draw()
-    fillp(0b1010010110100101)
-    rectfill(0,0,127,127,1)
-    fillp()
-
-    camera(0, sin(t()/4)*16)
-    ovalfill(64-65-40, 64-8, 64+64+40, 64+8, 1)
-    zprint(g_songname..":"..g_tracknum, 64, 59, 0, 7)
-    zprint("("..g_cur_track..")", 64, 65, 0, 7)
-    camera()
-end
-
 function get_next_cart()
     poke(0x4300, 0)
 
@@ -69,16 +57,10 @@ function get_next_cart()
         serial(0x0804, 0x4300, 1)
         if @0x4300 == 10 then
             local name, num = unpack(split(buff, ":"))
-            return name, get_first(buff, "-", ".", ":"), tonum(num, 0x4)
+            return name, tonum(num, 0x4)
         end
         buff = buff..chr(@0x4300)
     end
-end
-
-function zprint(str, x, y, align, color)
-    if align == 0    then x -= #str*2
-    elseif align > 0 then x -= #str*4+1 end
-    print(str, x, y, color)
 end
 
 -- split, but get the first thing with all delimiters

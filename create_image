@@ -1,0 +1,34 @@
+#!/bin/bash
+if [[ "$#" -ne 1 ]] && [[ "$#" -ne 3 ]]; then echo 'USAGE: create_image <dest.gif> [<src.p8.png> <track>]'; exit 1; fi
+
+DEST="$1"
+SOURCE="$2"
+TRACK="$3"
+
+if [[ "$#" -eq 1 ]]; then
+    convert -size 1280x720 canvas:black \
+        -font PICO-8-mono-Regular -pointsize 16 -gravity northwest \
+        -fill '#29adff' -draw 'text 35,35 "RADICO8 - A PICO-8 RADIO"' \
+        -fill '#83769c' -draw 'text 35,60 "BY AMORG GAMES - ALAN@XOC.IO"' \
+        -fill '#c2c3c7' -draw 'text 35,110 "SUBMIT CARTS AT:"' \
+        -fill '#c2c3c7' -draw 'text 35,135 "GITHUB.COM/ALANXOC3/RADICO8"' \
+        -fill '#fff1e8' -draw 'text 35,185 "> ' \
+        -fill '#ff004d' -draw 'rectangle 66,185,81,205' \
+        "$DEST"
+else
+    NAME=$(basename "$SOURCE" | sed 's/\.p8\.png$//g' | tr '[:lower:]' '[:upper:]')
+    TITLE=$(sed -E 's/[-:.].+$//g' <<< "$NAME")
+    convert "$SOURCE" -scale 320% -background black -gravity center -extent 1280x720 -roll +350+0 \
+        -font PICO-8-mono-Regular -pointsize 16 -gravity northwest \
+        -fill '#29adff' -draw 'text 35,35 "RADICO8 - A PICO-8 RADIO"' \
+        -fill '#83769c' -draw 'text 35,60 "BY AMORG GAMES - ALAN@XOC.IO"' \
+        -fill '#c2c3c7' -draw 'text 35,110 "SUBMIT CARTS AT:"' \
+        -fill '#c2c3c7' -draw 'text 35,135 "GITHUB.COM/ALANXOC3/RADICO8"' \
+        -fill '#fff1e8' -draw 'text 35,185 "> LOAD #'"$NAME"'"' \
+        -fill '#c2c3c7' -draw 'text 35,210 "DOWNLOADING.. OK"' \
+        -fill '#ff77a8' -draw 'text 35,235 "'"$TITLE"'"' \
+        -fill '#fff1e8' -draw 'text 35,285 "> MUSIC('$TRACK')"' \
+        -fill '#fff1e8' -draw 'text 35,310 "> ' \
+        -fill '#ff004d' -draw 'rectangle 66,310,81,330' \
+        "$DEST"
+fi

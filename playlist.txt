@@ -1,0 +1,10 @@
+rewob-9.p8.png:0
+rewob-9.p8.png:8
+rewob-9.p8.png:16
+rewob-9.p8.png:24
+rewob-9.p8.png:32
+rewob-9.p8.png:40
+rewob-9.p8.png:44
+rewob-9.p8.png:48
+rewob-9.p8.png:56
+ascent-0.p8.png:0

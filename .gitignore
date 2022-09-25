@@ -3,4 +3,6 @@
 *.p8
 *.p8.png
 .*.lua
-!manual_carts/*.p8
+*.gif
+!template.gif
+!cartridges/*.p8
