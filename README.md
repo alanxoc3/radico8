@@ -1,5 +1,5 @@
 # radico8
-radico8 is both a [web radio](http://radico8.xoc3.io/stream.ogg) and [youtube stream](https://youtube.com/channel/ucniwmnlnzy0rg17ii2rpikw/live) that plays [pico8](https://www.lexaloffle.com/pico-8.php) music.
+radico8 is both a [web radio](http://radico8.xoc3.io/stream.ogg) and [youtube stream](https://youtube.com/channel/UCNiwmNlnzY0Rg17Ii2RPIkw/live) that plays [pico8](https://www.lexaloffle.com/pico-8.php) music.
 
 ## submitting songs
 if you know some good pico-8 music, submit a pull request with your songs added to the [playlist.txt](./playlist.txt) file.
