@@ -1,0 +1,11 @@
+#!/bin/bash
+PLAYLIST=$(curl -s https://raw.githubusercontent.com/alanxoc3/radico8/main/playlist.txt | sort -u)
+
+echo "$PLAYLIST" | tee /srv/radico8/playlist.txt
+
+for cart in $(echo "$PLAYLIST" | awk -F : '{print $1}' | grep '\.p8\.png' | sort -u); do
+    if [[ ! -f /srv/radico8/cartridges/"$cart" ]]; then
+        folder=$(head -c 2 <<< "$cart")
+        wget "https://www.lexaloffle.com/bbs/cposts/$folder/$cart" -O /srv/radico8/cartridges/"$cart"
+    fi
+done

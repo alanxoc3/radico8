@@ -13,7 +13,7 @@ cp cartridges/radico8.lua ${TARGET_DIR}/cartridges
 cp cartridges/radico8.p8 ${TARGET_DIR}/cartridges
 
 cp -r docker ${TARGET_DIR}/docker
-cp playlist.txt start_radio start_youtube start_icecast ${TARGET_DIR}
+cp playlist.txt install_carts start_radio start_youtube start_icecast ${TARGET_DIR}
 
 echo "Installing systemd scripts..."
 
@@ -61,7 +61,31 @@ ExecStart=${TARGET_DIR}/start_icecast host.docker.internal 8010
 WantedBy=multi-user.target
 EOF
 
+cat << EOF | tee radico8-install-carts.service > /dev/null
+[Unit]
+Description=Installs recent list of carts.
+
+[Service]
+ExecStart=${TARGET_DIR}/install_carts
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+cat << EOF | tee radico8-install-carts.timer > /dev/null
+[Unit]
+Description=Timer for radico8-install-carts.service.
+
+[Timer]
+OnCalendar=hourly
+AccuracySec=1m
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+EOF
+
 echo "Reloading & restarting systemctl..."
 systemctl daemon-reload
-systemctl enable  radico8.service radico8-youtube.service radico8-icecast.service
-systemctl restart radico8.service radico8-youtube.service radico8-icecast.service
+systemctl enable  radico8.service radico8-youtube.service radico8-icecast.service radico8-install-carts.timer
+systemctl restart radico8.service radico8-youtube.service radico8-icecast.service radico8-install-carts.timer
