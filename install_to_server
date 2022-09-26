@@ -17,7 +17,7 @@ cat << EOF | tee /etc/systemd/system/radico8.service > /dev/null
 Description=Headless pico8 instance running radico8.
 
 [Service]
-ExecStart=${TARGET_DIR} ${TARGET_DIR}/start_radio /opt/pico8 ${TARGET_DIR}/cartridges ${TARGET_DIR}/playlist.txt
+ExecStart=${TARGET_DIR}/start_radio /opt/pico8 ${TARGET_DIR}/cartridges ${TARGET_DIR}/playlist.txt
 WorkingDirectory=${TARGET_DIR}
 
 [Install]
