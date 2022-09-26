@@ -16,8 +16,8 @@ cp -r docker ${TARGET_DIR}/docker
 cp playlist.txt install_carts start_radio start_youtube start_icecast ${TARGET_DIR}
 
 echo "Installing systemd scripts..."
-
-cat << EOF | tee /etc/systemd/system/radico8.service > /dev/null
+pushd /etc/systemd/system
+cat << EOF > radico8.service
 [Unit]
 Description=Headless pico8 instance running radico8.
 After=docker.service
@@ -31,7 +31,7 @@ ExecStart=${TARGET_DIR}/start_radio /opt/pico8 ${TARGET_DIR}/cartridges ${TARGET
 WantedBy=multi-user.target
 EOF
 
-cat << EOF | tee /etc/systemd/system/radico8-youtube.service > /dev/null
+cat << EOF > radico8-youtube.service
 [Unit]
 Description=Streams radico8 to youtube.
 After=radico8.service
@@ -46,7 +46,7 @@ ExecStart=${TARGET_DIR}/start_youtube
 WantedBy=multi-user.target
 EOF
 
-cat << EOF | tee /etc/systemd/system/radico8-icecast.service > /dev/null
+cat << EOF > radico8-icecast.service
 [Unit]
 Description=Streams radico8 to icecast.
 After=radico8.service
@@ -61,7 +61,7 @@ ExecStart=${TARGET_DIR}/start_icecast host.docker.internal 8010
 WantedBy=multi-user.target
 EOF
 
-cat << EOF | tee radico8-install-carts.service > /dev/null
+cat << EOF > radico8-install-carts.service
 [Unit]
 Description=Installs recent list of carts.
 
@@ -72,7 +72,7 @@ ExecStart=${TARGET_DIR}/install_carts
 WantedBy=multi-user.target
 EOF
 
-cat << EOF | tee radico8-install-carts.timer > /dev/null
+cat << EOF > radico8-install-carts.timer
 [Unit]
 Description=Timer for radico8-install-carts.service.
 
@@ -84,6 +84,7 @@ Persistent=true
 [Install]
 WantedBy=timers.target
 EOF
+popd
 
 echo "Reloading & restarting systemctl..."
 systemctl daemon-reload
