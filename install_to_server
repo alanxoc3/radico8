@@ -1,6 +1,5 @@
 #!/bin/bash
 TARGET_DIR=/srv/radico8
-# TARGET_USER=radico8
 
 if [ "${EUID:-$(id -u)}" -ne 0 ]; then
     echo "Rerun this script as root! Exiting with non-zero error code."
@@ -11,6 +10,11 @@ echo "Cloning repo to server location..."
 if [[ ! -d ${TARGET_DIR} ]]; then
     git clone 'https://github.com/alanxoc3/radico8.git' "$TARGET_DIR"
 fi
+
+pushd ${TARGET_DIR}
+git fetch
+git reset --hard origin/main
+popd
 
 echo "Installing systemd scripts..."
 
