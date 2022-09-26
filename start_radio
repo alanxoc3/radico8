@@ -1,13 +1,23 @@
 #!/bin/bash
-# Starts the pico8 radio and generates metadat & image files needed for streaming.
-# Pico8 might generate some ALSA error messages we need to ignore.
+if [[ "$#" -ne 3 ]]; then echo 'Usage: '$(basename "$0")' <pico-8-path> <cartridges-path> <playlist-path>'; exit 1; fi
 
-(while true; do cat playlist.txt | shuf; done) |
-    xvfb-run /opt/pico8/pico8 -accept_future 1 -root_path "$(pwd)/cartridges" -run cartridges/radico8.p8 | grep --line-buffered -vE '^ALSA' | \
-    while read -r line; do
-        cart=$(awk -F : '{print $1}' <<< "$line")
-        track=$(awk -F : '{print $2}' <<< "$line")
-        echo "playing: $cart - $track"
+PICO_PATH="$1"  # pico8 binary location
+CARTRIDGES="$2" # directory with .p8.png files
+PLAYLIST="$3"   # file with nl separated file/track pairs
 
-        create_image out.gif "cartridges/$cart" "$track"
-    done
+# container requires a UFW rule like this if you want to send traffic to localhost:
+# sudo ufw allow in on docker0 to any port XXXX
+
+echo 'BUILDING DOCKER'
+docker build docker -t radico8
+
+echo 'KILLING PREVIOUS CONTAINERS'
+LIST=$(docker ps --filter "label=radico8" | tail -n +2 | awk '{print $1}')
+[[ -n $LIST ]] && docker kill $LIST
+
+echo 'RUNNING DOCKER'
+docker run -d --label radico8 --add-host=host.docker.internal:host-gateway \
+    --mount type=bind,readonly,source="$PICO_PATH",target=/opt/pico8 \
+    --mount type=bind,readonly,source="$CARTRIDGES",target=/cartridges \
+    --mount type=bind,readonly,source="$PLAYLIST",target=/playlist.txt \
+    radico8

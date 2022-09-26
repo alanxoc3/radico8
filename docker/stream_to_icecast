@@ -2,6 +2,6 @@
 # Requires the source password to be exposed in an environment variable called "PASS".
 SERVER="$1"
 PORT="$2"
-start_radio &
+radio &
 pulseaudio -D --exit-idle-time=-1
 ffmpeg -f alsa -i default -f ogg -content_type audio/ogg icecast://source:"$PASS"@"$SERVER":"$PORT"/stream.ogg
