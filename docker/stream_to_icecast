@@ -3,4 +3,4 @@
 SERVER="$1"
 PORT="$2"
 pulseaudio -D --exit-idle-time=-1
-ffmpeg -f alsa -i default -f ogg -content_type audio/ogg icecast://source:"$PASS"@"$SERVER":"$PORT"/stream.ogg
+ffmpeg -nostdin -f alsa -i default -f ogg -content_type audio/ogg icecast://source:"$PASS"@"$SERVER":"$PORT"/stream.ogg
