@@ -17,10 +17,27 @@ echo "Installing systemd scripts..."
 cat << EOF | tee /etc/systemd/system/radico8.service > /dev/null
 [Unit]
 Description=Headless pico8 instance running radico8.
+After=docker.service
+Requires=docker.service
 
 [Service]
+Restart=always
 ExecStart=${TARGET_DIR}/start_radio /opt/pico8 ${TARGET_DIR}/cartridges ${TARGET_DIR}/playlist.txt
-WorkingDirectory=${TARGET_DIR}
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+cat << EOF | tee /etc/systemd/system/radico8-youtube.service > /dev/null
+[Unit]
+Description=Streams radico8 to youtube.
+After=radico8.service
+Requires=radico8.service
+
+[Service]
+Restart=always
+EnvironmentFile=/etc/radico8/youtube.env
+ExecStart=${TARGET_DIR}/start_youtube
 
 [Install]
 WantedBy=multi-user.target
@@ -28,5 +45,5 @@ EOF
 
 echo "Reloading & restarting systemctl..."
 systemctl daemon-reload
-systemctl enable radico8.service
-systemctl start radico8.service
+systemctl enable  radico8.service radico8-youtube.service
+systemctl restart radico8.service radico8-youtube.service
