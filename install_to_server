@@ -8,7 +8,9 @@ if [ "${EUID:-$(id -u)}" -ne 0 ]; then
 fi
 
 echo "Cloning repo to server location..."
-git clone 'https://github.com/alanxoc3/radico8.git' "$TARGET_DIR"
+if [[ ! -d ${TARGET_DIR} ]]; then
+    git clone 'https://github.com/alanxoc3/radico8.git' "$TARGET_DIR"
+fi
 
 echo "Installing systemd scripts..."
 
