@@ -10,6 +10,11 @@ if you know some good pico-8 music, submit a pull request with your songs added 
 - a shell script listens on the stdout of pico-8 to produce the youtube video image and webradio audio labels.
 - ffmpeg listens to any audio produced in the docker container and forwards it to icecast and youtube.
 
+## todo list
+- ffmpeg send ogg tags to icecast
+- supervisor in docker container
+- try docker --name
+
 ## credits
 pico-8 font for youtube stream came from here:
 - https://www.lexaloffle.com/bbs/?tid=3760
