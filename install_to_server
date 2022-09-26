@@ -1,0 +1,22 @@
+#!/bin/bash
+TARGET_DIR=/srv/radico8
+TARGET_USER=radico8
+pushd /etc/systemd/system/
+
+echo "Creating the ${TARGET_USER} user..."
+useradd -m -d ${TARGET_DIR} ${TARGET_USER}
+echo
+
+git clone 'https://github.com/alanxoc3/radico8.git' "$TARGET_DIR"/repo
+
+cat << EOF | tee /etc/systemd/system/radico8.service > /dev/null
+[Unit]
+Description=Headless pico8 instance running radico8.
+
+[Service]
+ExecStart=${TARGET_DIR} ${TARGET_DIR}/repo/start_radio /opt/pico8 ${TARGET_DIR}/repo/cartridges ${TARGET_DIR}/repo/playlist.txt
+WorkingDirectory=${TARGET_DIR}/repo
+
+[Install]
+WantedBy=multi-user.target
+EOF

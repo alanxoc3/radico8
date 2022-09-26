@@ -2,6 +2,9 @@
 # Starts the pico8 radio and generates metadat & image files needed for streaming.
 # Pico8 might generate some ALSA error messages we need to ignore.
 
+# Pulse audio should be started first, so pico8 can play audio to somewhere.
+pulseaudio -D --exit-idle-time=-1
+
 (while true; do cat playlist.txt | shuf; done) |
     xvfb-run /opt/pico8/pico8 -accept_future 1 -root_path "$(pwd)/cartridges" -run cartridges/radico8.p8 | grep --line-buffered -vE '^ALSA' | \
     while read -r line; do
