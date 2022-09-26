@@ -12,3 +12,4 @@ rewob-9.p8.png:44
 rewob-9.p8.png:48
 rewob-9.p8.png:56
 stabbycrabby-0.p8.png:48
+celeste_classic_2-5.p8.png:0
