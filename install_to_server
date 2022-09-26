@@ -9,11 +9,12 @@ fi
 
 echo "Copying files..."
 mkdir -p ${TARGET_DIR}/cartridges
+touch ${TARGET_DIR}/playlist.txt
 cp cartridges/radico8.lua ${TARGET_DIR}/cartridges
 cp cartridges/radico8.p8 ${TARGET_DIR}/cartridges
 
 cp -r docker ${TARGET_DIR}/docker
-cp playlist.txt install_carts start_radio start_youtube start_icecast ${TARGET_DIR}
+cp install_carts start_radio start_youtube start_icecast ${TARGET_DIR}
 
 echo "Installing systemd scripts..."
 pushd /etc/systemd/system
@@ -89,4 +90,4 @@ popd
 echo "Reloading & restarting systemctl..."
 systemctl daemon-reload
 systemctl enable  radico8.service radico8-youtube.service radico8-icecast.service radico8-install-carts.timer
-systemctl restart radico8.service radico8-youtube.service radico8-icecast.service radico8-install-carts.timer
+systemctl restart radico8.service radico8-youtube.service radico8-icecast.service radico8-install-carts.timer radico8-install-carts.service
