@@ -1,4 +1,5 @@
 #!/bin/bash
+# must run in repo directory
 TARGET_DIR=/srv/radico8
 
 if [ "${EUID:-$(id -u)}" -ne 0 ]; then
@@ -6,15 +7,13 @@ if [ "${EUID:-$(id -u)}" -ne 0 ]; then
     exit 1
 fi
 
-echo "Cloning repo to server location..."
-if [[ ! -d ${TARGET_DIR} ]]; then
-    git clone 'https://github.com/alanxoc3/radico8.git' "$TARGET_DIR"
-fi
+echo "Copying files..."
+mkdir -p ${TARGET_DIR}/cartridges
+cp cartridges/radico8.lua ${TARGET_DIR}/cartridges
+cp cartridges/radico8.p8 ${TARGET_DIR}/cartridges
 
-pushd ${TARGET_DIR}
-git fetch
-git reset --hard origin/main
-popd
+cp -r docker ${TARGET_DIR}/docker
+cp playlist.txt start_radio start_youtube start_icecast ${TARGET_DIR}
 
 echo "Installing systemd scripts..."
 
