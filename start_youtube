@@ -1,4 +1,4 @@
 #!/bin/bash
 CONTAINER=$(docker ps --filter "label=radico8" | tail -n +2 | awk '{print $1}' | head -n 1)
 if [[ "$#" -ne 0 ]] || [[ -z "$PASS" ]] || [[ -z "$CONTAINER" ]]; then echo -e 'Usage: PASS=<YOUTUBE-STREAM-KEY> '$(basename "$0")'\nAlso ensure a docker container with the radico8 label is running.'; exit 1; fi
-docker exec -it -e PASS="$PASS" "$CONTAINER" stream_to_youtube
+docker exec -i -e PASS="$PASS" "$CONTAINER" stream_to_youtube

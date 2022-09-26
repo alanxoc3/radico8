@@ -43,7 +43,22 @@ ExecStart=${TARGET_DIR}/start_youtube
 WantedBy=multi-user.target
 EOF
 
+cat << EOF | tee /etc/systemd/system/radico8-icecast.service > /dev/null
+[Unit]
+Description=Streams radico8 to icecast.
+After=radico8.service
+Requires=radico8.service
+
+[Service]
+Restart=always
+EnvironmentFile=/etc/radico8/icecast.env
+ExecStart=${TARGET_DIR}/start_icecast host.docker.internal 8010
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
 echo "Reloading & restarting systemctl..."
 systemctl daemon-reload
-systemctl enable  radico8.service radico8-youtube.service
-systemctl restart radico8.service radico8-youtube.service
+systemctl enable  radico8.service radico8-youtube.service radico8-icecast.service
+systemctl restart radico8.service radico8-youtube.service radico8-icecast.service
