@@ -1,4 +1,4 @@
-ahealthydoseofdungeon-5.p8.png:1
+ahealthydoseofdungeon-5.p8.png:0
 ascent-0.p8.png:0 
 fare_well-1.p8.png:0
 fare_well-1.p8.png:16
@@ -12,3 +12,10 @@ rewob-9.p8.png:44
 rewob-9.p8.png:48
 rewob-9.p8.png:56
 stabbycrabby-0.p8.png:48
+neglected_bear-3.p8.png:0
+52426.p8.png:0
+39950.p8.png:0
+39950.p8.png:14
+39950.p8.png:43
+heytherekitty-0.p8.png:0
+candle_rain-3.p8.png:0
