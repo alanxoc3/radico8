@@ -4,6 +4,9 @@ radico8 is both a [youtube stream](https://youtube.com/channel/UCNiwmNlnzY0Rg17I
 ## submitting songs
 if you know some good pico-8 music, submit a pull request adding the lexaloffle cart-id and track to the [playlist.txt](./playlist.txt) file. the repo admins might remove some songs, please don't feel bad if they remove your song.
 
+## issues
+please create a github issue if the stream is down and i'll try to get it back up as soon as i can. youtube takes down the stream if it isn't sending data to youtube for about 10 seconds. you can submit issues for small feature suggestions and bugfixes too.
+
 ## how it works
 - a headless instance of pico-8 is running inside a docker container.
 - pico-8 listens on stdin to figure out which carts it should play next.
@@ -13,11 +16,14 @@ if you know some good pico-8 music, submit a pull request adding the lexaloffle 
 - carts are downloaded as p8.png images directly from lexaloffle.
 
 ## credits
-learn about pico-8 it here:
+learn about pico-8:
 - https://www.lexaloffle.com/pico-8.php
 
-pico-8 font for youtube stream came from here:
+pico-8 font for youtube stream:
 - https://www.lexaloffle.com/bbs/?tid=3760
+
+inspired by the krelez's chiptune radio:
+- https://www.youtube.com/c/Krelez
 
 ## legal stuff
 please don't sue me. i'm not that rich anyways, so it's probably not worth it. if you're the author of a song and you'd like it removed from the radio, just submit a pull request to remove that song.
