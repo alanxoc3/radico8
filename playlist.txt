@@ -64,3 +64,6 @@ fnf_xmas:0
 fnf_roses:0
 fnf_ugh:0
 shootingstar-2:0
+56576:0
+56576:20
+56576:30
