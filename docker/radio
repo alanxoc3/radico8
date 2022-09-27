@@ -13,7 +13,7 @@ grep --line-buffered '' | \
 while read -r line; do
     if [[ "$line" = "---" ]]; then
         cat "$PLAYLIST" | sort -u | shuf > "$FIFO"
-        echo "---" > "$FIFO" # trigers pico8 script that we are done here
+        echo "---" > "$FIFO" # triggers pico8 script that we are done here
     else
         echo "$line"
     fi
