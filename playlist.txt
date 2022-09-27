@@ -9,10 +9,10 @@
 # rules:
 # - keep this list in alpha-numeric order
 # - only post the cart the song originally came from
+# - try adding a comment for numerical cart-ids
 # - please add good music :)
 
 15666:0
-17888:0
 17888:0
 38440:0
 38440:6
@@ -28,8 +28,11 @@
 39950:0  # zeldo
 39950:14 # zeldo
 39950:43 # zeldo
-49232:11
+49232:11 # just one boss
 52426:0  # danger zone
+56576:0
+56576:20
+56576:30
 ahealthydoseofdungeon-5:0
 ascent-0:0 
 candle_rain-3:0
