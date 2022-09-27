@@ -19,7 +19,7 @@ function load_song()
     -- reload current cart first because it has a stop at every track, ensuring bad files won't be played
     reload(0x3100, 0x3100, 0x1200)
     if g_cartname ~= "" then
-        reload(0x3100, 0x3100, 0x1200, g_cartname)
+        reload(0x3100, 0x3100, 0x1200, g_cartname..".p8.png")
         printh(g_cartname..":"..g_tracknum)
     end
     music(g_tracknum, 1000*FADE_IN_LENGTH)

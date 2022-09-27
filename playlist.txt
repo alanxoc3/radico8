@@ -1,22 +1,35 @@
-39950.p8.png:0
-39950.p8.png:14
-39950.p8.png:43
-52426.p8.png:0
-ahealthydoseofdungeon-5.p8.png:0
-ascent-0.p8.png:0 
-candle_rain-3.p8.png:0
-celeste_classic_2-5.p8.png:0
-fare_well-1.p8.png:0
-fare_well-1.p8.png:16
-heytherekitty-0.p8.png:0
-neglected_bear-3.p8.png:0
-rewob-9.p8.png:0
-rewob-9.p8.png:8
-rewob-9.p8.png:16
-rewob-9.p8.png:24
-rewob-9.p8.png:32
-rewob-9.p8.png:40
-rewob-9.p8.png:44
-rewob-9.p8.png:48
-rewob-9.p8.png:56
-stabbycrabby-0.p8.png:48
+# welcome to the playlist file.
+
+# comments are denoted with a "#" sign
+# format is: <cart-id>:<track-num>
+# cart-id is located below the pico-8 cart at lexaloffle.com.
+# track-num is the track in that cart that contains your song.
+# cart tracks can be viewed by running "load #cart-id" in pico-8.
+
+# rules:
+# - keep this list in alpha-numeric order
+# - only post the cart the song originally came from
+# - please add good music :)
+
+39950:0  # zeldo
+39950:14 # zeldo
+39950:43 # zeldo
+52426:0  # danger zone
+ahealthydoseofdungeon-5:0
+ascent-0:0 
+candle_rain-3:0
+celeste_classic_2-5:0
+fare_well-1:0
+fare_well-1:16
+heytherekitty-0:0
+neglected_bear-3:0
+rewob-9:0
+rewob-9:8
+rewob-9:16
+rewob-9:24
+rewob-9:32
+rewob-9:40
+rewob-9:44
+rewob-9:48
+rewob-9:56
+stabbycrabby-0:48
