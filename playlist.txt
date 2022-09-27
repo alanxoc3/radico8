@@ -23,7 +23,6 @@ fare_well-1:0
 fare_well-1:16
 heytherekitty-0:0
 neglected_bear-3:0
-rewob-9:0
 rewob-9:8
 rewob-9:16
 rewob-9:24
