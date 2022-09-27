@@ -15,3 +15,8 @@ if you know some good pico-8 music, submit a pull request adding the lexaloffle 
 ## credits
 pico-8 font for youtube stream came from here:
 - https://www.lexaloffle.com/bbs/?tid=3760
+
+## legal stuff
+please don't sue me. i'm not that rich anyways, so it's probably not worth it. if you're the author of a song and you'd like it removed from the radio, just submit a pull request that removes the song.
+
+this repo is licensed under [CC4-BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) because most pico-8 games use that license too.
