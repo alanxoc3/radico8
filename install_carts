@@ -2,14 +2,17 @@
 PLAYLIST=$(curl -s https://raw.githubusercontent.com/alanxoc3/radico8/main/playlist.txt | sort -u)
 
 for cart in $(echo "$PLAYLIST" | awk -F : '{print $1}' | grep '\.p8\.png' | sort -u); do
-    if [[ ! -f /srv/radico8/cartridges/"$cart" ]] && [[ ! -s /srv/radico8/cartridges/"$cart" ]]; then
+    fullcartpath=/srv/radico8/cartridges/"$cart"
+    if [[ ! -f "$fullcartpath" ]] || [[ ! -s "$fullcartpath" ]]; then
         # very old carts were referenced by numbers
         # newer ones are referenced by letters and the first character can't be a number
         folder=$(head -c 1 <<< "$cart")
-        if [[ ! "$firstchar" =~ ^[0-9]$ ]]; then
+        if [[ ! "$folder" =~ ^[0-9]$ ]]; then
             folder=$(head -c 2 <<< "$cart")
         fi
-        wget "https://www.lexaloffle.com/bbs/cposts/$folder/$cart" -O /srv/radico8/cartridges/"$cart"
+	url="https://www.lexaloffle.com/bbs/cposts/$folder/$cart"
+	echo "STARTING DOWNLOAD FOR: $url"
+        wget "$url" -O /srv/radico8/cartridges/"$cart"
     fi
 done
 

@@ -77,7 +77,7 @@ cat << EOF > radico8-install-carts.timer
 Description=Timer for radico8-install-carts.service.
 
 [Timer]
-OnCalendar=hourly
+OnCalendar=*:0/30
 AccuracySec=1m
 Persistent=true
 
