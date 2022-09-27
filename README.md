@@ -1,8 +1,8 @@
 # radico8
-radico8 is both a [youtube stream](https://youtube.com/channel/UCNiwmNlnzY0Rg17Ii2RPIkw/live) and [web radio](http://radico8.xoc3.io/stream.ogg) that plays [pico8](https://www.lexaloffle.com/pico-8.php) music.
+radico8 is both a [youtube stream](https://youtube.com/channel/UCNiwmNlnzY0Rg17Ii2RPIkw/live) and [web radio](http://radico8.xoc3.io/stream.ogg) that plays [pico-8](https://www.lexaloffle.com/pico-8.php) music.
 
 ## submitting songs
-if you know some good pico-8 music, submit a pull request adding the lexaloffle cart-id and track to the [playlist.txt](./playlist.txt) file.
+if you know some good pico-8 music, submit a pull request adding the lexaloffle cart-id and track to the [playlist.txt](./playlist.txt) file. the repo admins might remove some songs, please don't feel bad if they remove your song.
 
 ## how it works
 - a headless instance of pico-8 is running inside a docker container.
@@ -13,10 +13,13 @@ if you know some good pico-8 music, submit a pull request adding the lexaloffle 
 - carts are downloaded as p8.png images directly from lexaloffle.
 
 ## credits
+learn about pico-8 it here:
+- https://www.lexaloffle.com/pico-8.php
+
 pico-8 font for youtube stream came from here:
 - https://www.lexaloffle.com/bbs/?tid=3760
 
 ## legal stuff
-please don't sue me. i'm not that rich anyways, so it's probably not worth it. if you're the author of a song and you'd like it removed from the radio, just submit a pull request that removes the song.
+please don't sue me. i'm not that rich anyways, so it's probably not worth it. if you're the author of a song and you'd like it removed from the radio, just submit a pull request to remove that song.
 
 this repo is licensed under [CC4-BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) because most pico-8 games use that license too.
