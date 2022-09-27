@@ -1,5 +1,5 @@
 #!/bin/bash
-if [[ "$#" -ne 0 ]] || [[ -z "$PASS" ]]; then echo 'USAGE: PASS=<YT-STREAM-KEY> '$(basename "$0"); exit 1; fi
+if [[ "$#" -ne 0 ]] || [[ -z "$PASS" ]]; then echo 'USAGE: PASS=<password> '$(basename "$0"); exit 1; fi
 
 VIDEO_FILE="out.gif"
 VBR="1500k"

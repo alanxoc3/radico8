@@ -4,5 +4,6 @@ RUN apt update && apt install -y pulseaudio xvfb ffmpeg && rm -rf /var/lib/apt/l
 RUN apt update && apt install -y imagemagick
 COPY pico8mono.ttf /usr/share/fonts/
 COPY template.gif /out.gif
-COPY create_image radio stream_to_youtube stream_to_icecast /usr/bin/
-ENTRYPOINT ["radio"]
+COPY docker_init_script create_image radio stream_to_youtube stream_to_icecast /usr/bin/
+RUN mkfifo /radico8-playlist.pipe
+ENTRYPOINT ["docker_init_script"]

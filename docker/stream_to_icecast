@@ -1,6 +1,6 @@
 #!/bin/bash
-# Requires the source password to be exposed in an environment variable called "PASS".
+if [[ "$#" -ne 2 ]] || [[ -z "$PASS" ]]; then echo 'USAGE: PASS=<password> '$(basename "$0")' <server> <port>'; exit 1; fi
+
 SERVER="$1"
 PORT="$2"
-pulseaudio -D --exit-idle-time=-1
 ffmpeg -nostdin -f alsa -i default -f ogg -content_type audio/ogg icecast://source:"$PASS"@"$SERVER":"$PORT"/stream.ogg

@@ -40,8 +40,7 @@ Requires=radico8.service
 
 [Service]
 Restart=always
-EnvironmentFile=/etc/radico8/youtube.env
-ExecStart=${TARGET_DIR}/start_youtube
+ExecStart=docker exec -i --env-file /etc/radico8/youtube.env radico8 stream_to_youtube
 
 [Install]
 WantedBy=multi-user.target
@@ -55,8 +54,7 @@ Requires=radico8.service
 
 [Service]
 Restart=always
-EnvironmentFile=/etc/radico8/icecast.env
-ExecStart=${TARGET_DIR}/start_icecast host.docker.internal 8010
+ExecStart=docker exec -i --env-file /etc/radico8/icecast.env radico8 stream_to_icecast host.docker.internal 8010
 
 [Install]
 WantedBy=multi-user.target

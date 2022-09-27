@@ -12,8 +12,6 @@ if you know some good pico-8 music, submit a pull request with your songs added 
 
 ## todo list
 - ffmpeg send ogg tags to icecast
-- supervisor in docker container
-- try docker --name
 
 ## credits
 pico-8 font for youtube stream came from here:

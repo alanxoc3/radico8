@@ -11,12 +11,12 @@ PLAYLIST="$3"   # file with nl separated file/track pairs
 echo 'BUILDING DOCKER'
 docker build docker -t radico8
 
-echo 'KILLING PREVIOUS CONTAINERS'
-LIST=$(docker ps --filter "label=radico8" | tail -n +2 | awk '{print $1}')
-[[ -n $LIST ]] && docker kill $LIST
+echo 'KILLING PREVIOUS CONTAINER'
+docker kill radico8 2>/dev/null
+docker rm   radico8 2>/dev/null
 
 echo 'RUNNING DOCKER'
-docker run -i --label radico8 --add-host=host.docker.internal:host-gateway \
+docker run -i --rm --name radico8 --add-host=host.docker.internal:host-gateway \
     --mount type=bind,readonly,source="$PICO_PATH",target=/opt/pico8 \
     --mount type=bind,readonly,source="$CARTRIDGES",target=/cartridges \
     --mount type=bind,readonly,source="$PLAYLIST",target=/playlist.txt \

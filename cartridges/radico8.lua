@@ -10,7 +10,7 @@ function _init()
 end
 
 function load_song()
-    g_cartname, g_tracknum = get_next_cart()
+    g_cartname, g_tracknum = next_song()
     g_song_time = 0
     g_cur_track = g_tracknum
     g_tracks = {[g_cur_track]=true}
@@ -18,8 +18,10 @@ function load_song()
 
     -- reload current cart first because it has a stop at every track, ensuring bad files won't be played
     reload(0x3100, 0x3100, 0x1200)
-    reload(0x3100, 0x3100, 0x1200, g_cartname)
-    printh(g_cartname..":"..g_tracknum)
+    if g_cartname ~= "" then
+        reload(0x3100, 0x3100, 0x1200, g_cartname)
+        printh(g_cartname..":"..g_tracknum)
+    end
     music(g_tracknum, 1000*FADE_IN_LENGTH)
 end
 
@@ -49,24 +51,39 @@ function _update60()
     if g_song_time           then           g_song_time += 1 end
 end
 
-function get_next_cart()
+g_playlist = {}
+function next_song()
+    if #g_playlist == 0 then
+        printh("---") -- triger scripts to send input
+        g_playlist = load_round()
+    end
+
+    if #g_playlist > 0 then
+        return unpack(deli(g_playlist,1))
+    end
+
+    return "", 0
+end
+
+function load_round()
+    local playlist = {}
+
     poke(0x4300, 0)
 
     local buff = ""
     while true do
         serial(0x0804, 0x4300, 1)
         if @0x4300 == 10 then
-            local name, num = unpack(split(buff, ":"))
-            return name, tonum(num, 0x4)
+            -- printh(buff.." -- "..#buff)
+            if buff == "---" then
+                return playlist
+            else
+                local name, num = unpack(split(buff, ":"))
+                add(playlist, {name, tonum(num, 0x4)})
+                buff=""
+            end
+        else
+            buff = buff..chr(@0x4300)
         end
-        buff = buff..chr(@0x4300)
     end
-end
-
--- split, but get the first thing with all delimiters
-function get_first(text, ...)
-    foreach({...}, function(delim)
-        text = split(text, delim)[1]
-    end)
-    return text
 end
