@@ -44,7 +44,7 @@ Restart=always
 ExecStart=docker exec -i --env-file /etc/radico8/youtube.env radico8 stream_to_youtube
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=radico8.service
 EOF
 
 cat << EOF > radico8-icecast.service
@@ -58,7 +58,7 @@ Restart=always
 ExecStart=docker exec -i --env-file /etc/radico8/icecast.env radico8 stream_to_icecast host.docker.internal 8010
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=radico8.service
 EOF
 
 cat << EOF > radico8-install-carts.service
