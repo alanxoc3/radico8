@@ -9,7 +9,8 @@ if you know some good pico-8 music, submit a pull request adding the lexaloffle 
 - pico-8 listens on stdin to figure out which carts it should play next.
 - a shell script listens on stdout of pico-8 to produce the youtube video image.
 - ffmpeg listens to any audio produced in the docker container and forwards it to icecast and youtube.
-- a cron job runs every hour to load playlist updates into the radio by downloading carts from lexaloffle.
+- a cron job runs every hour to load playlist updates into the radio.
+- carts are downloaded as p8.png images directly from lexaloffle.
 
 ## credits
 pico-8 font for youtube stream came from here:
