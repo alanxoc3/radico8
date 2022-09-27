@@ -16,14 +16,9 @@ please create a github issue if the stream is down and i'll try to get it back u
 - carts are downloaded as p8.png images directly from lexaloffle.
 
 ## credits
-learn about pico-8:
-- https://www.lexaloffle.com/pico-8.php
-
-pico-8 font for youtube stream:
-- https://www.lexaloffle.com/bbs/?tid=3760
-
-inspired by the krelez's chiptune radio:
-- https://www.youtube.com/c/Krelez
+- learn about pico-8: https://www.lexaloffle.com/pico-8.php
+- pico-8 font for youtube stream: https://www.lexaloffle.com/bbs/?tid=3760
+- inspired by the krelez's chiptune radio: https://www.youtube.com/c/Krelez
 
 ## legal stuff
 please don't sue me. i'm not that rich anyways, so it's probably not worth it. if you're the author of a song and you'd like it removed from the radio, just submit a pull request to remove that song.
