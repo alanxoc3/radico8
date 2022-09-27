@@ -5,7 +5,7 @@ radico8 is both a [youtube stream](https://youtube.com/channel/UCNiwmNlnzY0Rg17I
 if you know some good pico-8 music, submit a pull request adding the lexaloffle cart-id and track to the [playlist.txt](./playlist.txt) file. the repo admins might remove some songs, please don't feel bad if they remove your song.
 
 ## issues
-please create a github issue if the stream is down and i'll try to get it back up as soon as i can. youtube takes down the stream if it isn't sending data to youtube for about 10 seconds. you can submit issues for small feature suggestions and bugfixes too.
+please create a github issue if the stream is down and i'll try to get it back up as soon as i can. you can submit issues for small feature suggestions and bugfixes too.
 
 ## how it works
 - a headless instance of pico-8 is running inside a docker container.
