@@ -27,6 +27,7 @@ Requires=docker.service
 [Service]
 Restart=always
 ExecStart=${TARGET_DIR}/start_radio /opt/pico8 ${TARGET_DIR}/docker ${TARGET_DIR}/cartridges ${TARGET_DIR}/playlist.txt
+ExecStop=docker kill radico8
 
 [Install]
 WantedBy=multi-user.target
