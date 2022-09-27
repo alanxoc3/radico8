@@ -3,4 +3,4 @@ if [[ "$#" -ne 2 ]] || [[ -z "$PASS" ]]; then echo 'USAGE: PASS=<password> '$(ba
 
 SERVER="$1"
 PORT="$2"
-ffmpeg -nostdin -f alsa -i default -f ogg -metadata title='radico8 - a pico8 radio' -metadata artist='various pico-8 artists' -metadata comment='visit github.com/alanxoc3/radico8 to submit songs' -content_type audio/ogg icecast://source:"$PASS"@"$SERVER":"$PORT"/stream.ogg
+ffmpeg -nostdin -f alsa -i default -f ogg -metadata title='radico8 - a pico-8 radio' -metadata artist='various pico-8 artists' -metadata comment='github.com/alanxoc3/radico8' -content_type audio/ogg icecast://source:"$PASS"@"$SERVER":"$PORT"/stream.ogg
