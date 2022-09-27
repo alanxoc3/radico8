@@ -14,7 +14,7 @@ cp cartridges/radico8.lua ${TARGET_DIR}/cartridges
 cp cartridges/radico8.p8 ${TARGET_DIR}/cartridges
 
 cp -r docker ${TARGET_DIR}/docker
-cp install_carts start_radio start_youtube start_icecast ${TARGET_DIR}
+cp install_carts start_radio ${TARGET_DIR}
 
 echo "Installing systemd scripts..."
 pushd /etc/systemd/system
