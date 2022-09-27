@@ -78,7 +78,9 @@ function load_round()
             if buff == "---" then
                 return playlist
             else
-                local name, num = unpack(split(buff, ":"))
+                -- don't want to convert numbers, because some numbers are cart
+                -- ids larger than the pico8 number limit, so they wrap to negative.
+                local name, num = unpack(split(buff, ":", false))
                 add(playlist, {name, tonum(num, 0x4)})
                 buff=""
             end
