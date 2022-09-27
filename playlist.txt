@@ -56,3 +56,11 @@ picotunes2-0:49
 picotunes2-0:56
 15666:0
 17888:0
+fnf_menu-6:0
+fnf_dad:0
+fnf_halloween:0
+fnf_pico:0
+fnf_milf:0
+fnf_xmas:0
+fnf_roses:0
+fnf_ugh:0
