@@ -29,6 +29,7 @@
 39950:0  # zeldo
 39950:14 # zeldo
 39950:43 # zeldo
+44783:0 # arcus trigoni
 49232:11 # just one boss
 51707:0  # chrononaut
 52426:0  # danger zone
