@@ -15,6 +15,7 @@
 10022:0  # hug arena
 15666:0  # gruber jam
 17888:0  # hyrule castle
+27415:0  # wizardish by 0xabad1dea
 38440:0  # pico-8 tunes
 38440:6  # pico-8 tunes
 38440:14 # pico-8 tunes
