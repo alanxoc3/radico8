@@ -15,6 +15,15 @@ please create a github issue if the stream is down and i'll try to get it back u
 - a cron job runs every hour to load playlist updates into the radio.
 - carts are downloaded as p8.png images directly from lexaloffle.
 
+## behavior
+- once radico8 notices a song is repeating, it will end the song in 20 seconds.
+- the max length a single song can play is 5 minutes, before radico8 will end the song.
+- radico8 shuffles the entire playlist then plays songs until every song has been played.
+
+## todo
+- optional way to add music author
+- try getting lexaloffle username of cart uploader
+
 ## credits
 - learn about pico-8: https://www.lexaloffle.com/pico-8.php
 - pico-8 font for youtube stream: https://www.lexaloffle.com/bbs/?tid=3760
