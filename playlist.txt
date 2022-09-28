@@ -36,6 +36,7 @@
 56576:0  # mai chan
 56576:20 # mai chan
 56576:30 # mai chan
+64171:2  # curse of the lich king
 ahealthydoseofdungeon-5:0
 ascent-0:0 
 astropocalypse-0:31
