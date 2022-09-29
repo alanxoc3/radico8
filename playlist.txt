@@ -30,7 +30,6 @@
 39950:0  # zeldo
 39950:14 # zeldo
 39950:43 # zeldo
-44783:0 # arcus trigoni
 49232:11 # just one boss
 51707:0  # chrononaut
 52426:0  # danger zone
@@ -40,6 +39,7 @@
 56576:30 # mai chan
 64171:2  # curse of the lich king
 ahealthydoseofdungeon-5:0
+arcus_trigoni-0:0 # arcus trigoni
 ascent-0:0 
 astropocalypse-0:31
 aztec-1:0
