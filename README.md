@@ -27,6 +27,8 @@ please create a github issue if the stream is down and i'll try to get it back u
 - smarter systemd restarts (spaced out a bit)
 - fix bug where nothing played for a minute
 - maybe have a cron that reboots pico8 once every few days
+- don't break if playlist missing colon (grep on bash, fix on lua)
+- move lua/p8 out of cartridges dir
 
 ## credits
 - learn about pico-8: https://www.lexaloffle.com/pico-8.php
