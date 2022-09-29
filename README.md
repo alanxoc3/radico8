@@ -23,6 +23,10 @@ please create a github issue if the stream is down and i'll try to get it back u
 ## todo
 - optional way to add music author
 - try getting lexaloffle username of cart uploader
+- send track info to icecast
+- smarter systemd restarts (spaced out a bit)
+- fix bug where nothing played for a minute
+- maybe have a cron that reboots pico8 once every few days
 
 ## credits
 - learn about pico-8: https://www.lexaloffle.com/pico-8.php

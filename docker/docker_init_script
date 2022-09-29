@@ -9,3 +9,6 @@ while read -r line; do
     create_image out.gif "/cartridges/$cart.p8.png" "$track"
     echo "PLAYING: #$cart -- $track"
 done
+
+# todo: this explains how to update the track info in icecast:
+# https://icecast.org/docs/icecast-trunk/admin_interface/
