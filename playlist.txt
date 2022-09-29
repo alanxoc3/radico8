@@ -50,6 +50,7 @@ arcus_trigoni-0:0
 ascent-0:0 
 astropocalypse-0:31
 aztec-1:0
+aztec-1:10
 a_resolute_purpose-0:0
 birdandbeans-4:6
 birdswithguns-3:0
