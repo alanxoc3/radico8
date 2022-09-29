@@ -14,8 +14,12 @@
 
 10022:0  # hug arena
 15666:0  # gruber jam
+17774:9  # Hybris
 17888:0  # hyrule castle
+22377:1  # Super Poulet Poulet
+22377:28 # Super Poulet Poulet
 27415:0  # wizardish by 0xabad1dea
+32957:0  # Cake Factory
 38440:0  # pico-8 tunes
 38440:6  # pico-8 tunes
 38440:14 # pico-8 tunes
@@ -30,6 +34,7 @@
 39950:0  # zeldo
 39950:14 # zeldo
 39950:43 # zeldo
+41286:0  # Mystic Realm Dizzy
 49232:11 # just one boss
 51707:0  # chrononaut
 52426:0  # danger zone
@@ -38,15 +43,19 @@
 56576:20 # mai chan
 56576:30 # mai chan
 64171:2  # curse of the lich king
+abc-0:0
+abc-0:23
 ahealthydoseofdungeon-5:0
 arcus_trigoni-0:0 # arcus trigoni
 ascent-0:0 
 astropocalypse-0:31
 aztec-1:0
 a_resolute_purpose-0:0
+birdandbeans-4:6
 birdswithguns-3:0
 cab_ride-7:0
 cab_ride-7:16
+cab_ride-7:31
 celeste_classic_2-5:0
 cr9fo3n3zusu7g7uxaxgw0blh56100:0
 crowded_dungeon_crawler-3:0
@@ -64,12 +73,41 @@ fnf_pico:0
 fnf_roses:0
 fnf_ugh:0
 fnf_xmas:0
+fsgupicozombiegarden121-0:8
+fsgupicozombiegarden121-0:47
+fuz_v1-1:0
+fuz_v1-1:4
+fuz_v1-1:6
+ghostdogshort-1:0
+ghosthouse-0:13
 golfsunday-0:0
+grippy-6:0
+grippy-6:21
+harold-6:0
 highstakes-2:1
+hotfoot-2:0
+hotfoot-2:17
+jigsaw_xmas-5:36
+katamari_christmassy-1:0
+katamari_christmassy-1:8
+kirbys_big_bean_blast-0:0
+loca_conda-1:12
+marballs_2-0:3
+marballs_2-0:8
+marballs_2-0:12
+marballs_2-0:14
+marballs_2-0:19
+marballs_2-0:27
+marballs_2-0:41
 mddcn07uic4xnw1t88wfub5oe3b066:0
+mellow-2:3
+nacwseswahmmm-2:2
 minima-0:17
 myrrhs_edge-3:0
+neon-0:0
 pico8_0112-0:0
+picochak-0
+picochill-1:0
 picodepon-2:0
 picotunes2-0:0
 picotunes2-0:6
@@ -77,6 +115,10 @@ picotunes2-0:13
 picotunes2-0:21
 picotunes2-0:31
 picotunes2-0:49
+pigments-0:0
+polarpanic-0:0
+polarpanic-0:2
+porklike-2:1
 poom_e1-7:0
 rewob-9:8
 rewob-9:16
@@ -87,11 +129,15 @@ rewob-9:44
 rewob-9:48
 rewob-9:56
 seinsim-0:18
+snowplower-1:0
 shootingstar-2:0
 shovelknightmusic-0:0
 stabbycrabby-0:48
+squiddefence-4:1
+squiddefence-4:9
 techno_utopian_edict-1:0
 terra_1cart-39:0
+terra_1cart-39:31
 thelair-0:15
 the_lost_night-4:0
 to_a_starling_v1_1-5:1
@@ -101,4 +147,6 @@ undune2_map1-3:0
 undune2_map1-3:6
 violet-37:0
 white_ale_in_benin-0:0
+willo-0:3
+xmasfish-1:2
 xzero-3:0
