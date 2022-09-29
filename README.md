@@ -28,6 +28,7 @@ please create a github issue if the stream is down and i'll try to get it back u
 - learn about pico-8: https://www.lexaloffle.com/pico-8.php
 - pico-8 font for youtube stream: https://www.lexaloffle.com/bbs/?tid=3760
 - inspired by the krelez's chiptune radio: https://www.youtube.com/c/Krelez
+- splore api: https://www.ebartsoft.com/pico8
 
 ## legal stuff
 please don't sue me. i'm not that rich anyways, so it's probably not worth it. if you're the author of a song and you'd like it removed from the radio, just submit a pull request to remove that song.

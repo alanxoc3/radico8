@@ -66,7 +66,7 @@ cat << EOF > radico8-install-carts.service
 Description=Installs recent list of carts.
 
 [Service]
-ExecStart=${TARGET_DIR}/install_carts
+ExecStart=${TARGET_DIR}/install_carts /srv/radico8/playlist.txt /srv/radico8/cartridges
 
 [Install]
 WantedBy=multi-user.target
