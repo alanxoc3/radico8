@@ -106,7 +106,7 @@ minima-0:17
 myrrhs_edge-3:0
 neon-0:0
 pico8_0112-0:0
-picochak-0
+picochak-0:0
 picochill-1:0
 picodepon-2:0
 picotunes2-0:0
