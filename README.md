@@ -16,6 +16,7 @@ giving credit to the actual artist of a song is a manual process. if a song is a
 - ffmpeg listens to any audio produced in the docker container and forwards it to icecast and youtube.
 - a cron job runs every hour to load playlist updates into the radio.
 - carts are downloaded as p8.png images directly from lexaloffle.
+- the pico-8 console is rebooted every monday and whenever i push code updates.
 
 ## behavior
 - once radico8 notices a song is repeating, it will end the song in 20 seconds.
@@ -24,7 +25,6 @@ giving credit to the actual artist of a song is a manual process. if a song is a
 
 ## todo
 - send track info to icecast
-- maybe have a cron that reboots pico8 once every week
 
 ## credits
 - learn about pico-8: https://www.lexaloffle.com/pico-8.php

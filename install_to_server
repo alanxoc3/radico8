@@ -77,9 +77,6 @@ Description=Installs recent list of carts.
 
 [Service]
 ExecStart=${TARGET_DIR}/install_carts /srv/radico8/playlist.txt /srv/radico8/cartridges
-
-[Install]
-WantedBy=multi-user.target
 EOF
 
 cat << EOF > radico8-install-carts.timer
@@ -94,9 +91,30 @@ Persistent=true
 [Install]
 WantedBy=timers.target
 EOF
+
+cat << EOF > radico8-reboot.service
+[Unit]
+Description=Reboot radico8 once a week.
+
+[Service]
+ExecStart=systemctl restart radico8
+EOF
+
+cat << EOF > radico8-reboot.timer
+[Unit]
+Description=Timer for radico8-reboot.service
+
+[Timer]
+OnCalendar=Mon 01:00
+AccuracySec=1m
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+EOF
 popd
 
 echo "Reloading & restarting systemctl..."
 systemctl daemon-reload
-systemctl enable  radico8.service radico8-youtube.service radico8-icecast.service radico8-install-carts.timer
-systemctl restart radico8.service radico8-youtube.service radico8-icecast.service radico8-install-carts.timer radico8-install-carts.service
+systemctl enable  radico8.service radico8-youtube.service radico8-icecast.service radico8-install-carts.timer radico8-reboot.timer radico8-reboot.service
+systemctl restart radico8.service radico8-youtube.service radico8-icecast.service radico8-install-carts.timer radico8-reboot.timer radico8-install-carts.service
