@@ -50,7 +50,7 @@ abc-0:0
 abc-0:23
 ahealthydoseofdungeon-5:0
 arcus_trigoni-0:0
-ascent-0:0 
+ascent-0:0:vavmusicmagic
 astropocalypse-0:31
 aztec-1:0:vavmusicmagic
 aztec-1:10:vavmusicmagic
