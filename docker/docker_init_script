@@ -28,14 +28,12 @@ while read -r line; do
         "c2c3c7|GITHUB.COM/ALANXOC3/RADICO8" \
         "000000|" \
         "fff1e8|> LOAD #$name" \
-        "c2c3c7|DOWNLOADING.. OK" \
         "000000|" \
         "ff77a8|$title" \
         "fff1e8|BY $author" \
         "c2c3c7|ON $date" \
         "000000|" \
         "fff1e8|> MUSIC($track)" \
-        "c2c3c7|STREAMING.. OK" \
         "000000|" \
         "ff77a8|TRACK $track" \
         "fff1e8|BY $artist" \
