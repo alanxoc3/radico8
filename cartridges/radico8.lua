@@ -77,7 +77,6 @@ function load_round()
     while true do
         serial(0x0804, 0x4300, 1)
         if @0x4300 == 10 then
-            -- printh(buff.." -- "..#buff)
             if buff == "---" then
                 return playlist
             else

@@ -27,3 +27,14 @@ done
 
 # todo: this explains how to update the track info in icecast:
 # https://icecast.org/docs/icecast-trunk/admin_interface/
+
+# possible new format:
+# > LOAD #12324
+# DOWNLOADING.. OK
+# THE GAME OF LIFE
+# 
+# > MUSIC(0)
+# UPLOADER: ALANXOC3
+# COMPOSER: GRUBER_MUSIC
+# 
+# > 

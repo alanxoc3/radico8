@@ -4,5 +4,7 @@
 *.p8.png
 .*.lua
 *.gif
+cartridges
 !template.gif
-!cartridges/*.p8
+!cartridges/radico8.p8
+!cartridges/radico8.lua

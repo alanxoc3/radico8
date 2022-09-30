@@ -10,14 +10,20 @@ sanitize() {
 
 PLAYLIST=$(curl -s https://raw.githubusercontent.com/alanxoc3/radico8/main/playlist.txt | sanitize | sort -Vu)
 
+# found the pico8 api thanks to https://www.ebartsoft.com/pico8
 for cart in $(echo "$PLAYLIST" | awk -F : '{print $1}' | sort -u); do
     fullcartpath="$CARTS_PATH/$cart.p8.png"
     if [[ ! -f "$fullcartpath" ]] || [[ ! -s "$fullcartpath" ]]; then
-        # found this api thanks to https://www.ebartsoft.com/pico8
-        # much better & more reliable than what i was doing before to download carts
         url="http://www.lexaloffle.com/bbs/get_cart.php?cat=7&play_src=2&lid=$cart"
-        echo "STARTING DOWNLOAD FOR: $url"
-        wget "http://www.lexaloffle.com/bbs/get_cart.php?cat=7&play_src=2&lid=$cart" -O "$fullcartpath"
+        echo "CART DOWNLOAD: $url"
+        wget "$url" -O "$fullcartpath"
+    fi
+
+    infocartpath="$CARTS_PATH/$cart.txt"
+    if [[ ! -f "$infocartpath" ]] || [[ ! -s "$infocartpath" ]]; then
+        url="http://www.lexaloffle.com/bbs/cpost_lister3.php?lid=$cart"
+        echo "TEXT DOWNLOAD: $url"
+        wget "$url" -O "$infocartpath"
     fi
 done
 
