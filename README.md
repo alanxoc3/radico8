@@ -23,10 +23,7 @@ giving credit to the actual artist of a song is a manual process. if a song is a
 - radico8 shuffles the entire playlist then plays songs until every song has been played.
 
 ## todo
-- optional way to add music author
-- try getting lexaloffle username of cart uploader
 - send track info to icecast
-- smarter systemd restarts (spaced out a bit)
 - maybe have a cron that reboots pico8 once every week
 
 ## credits
