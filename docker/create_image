@@ -1,34 +1,38 @@
 #!/bin/bash
-if [[ "$#" -ne 1 ]] && [[ "$#" -ne 3 ]]; then echo 'USAGE: '$(basename $0)' <dest.gif> [<src.p8.png> <track>]'; exit 1; fi
+# will wrap text to the pico8 screen limit (32)
+# also indents commandline things when wrapped
+# i'm probably imitating pico8 too much here :)
 
-DEST="$1"
-SOURCE="$2"
-TRACK="$3"
+# to create the template image:
+# ./create_image template.gif blank.p8.png '29adff|RADICO8 - A PICO-8 RADIO' '83769c|BY AMORG (ALAN@XOC3.IO)' '000000|' 'c2c3c7|SUBMIT CARTS AT:' 'c2c3c7|GITHUB.COM/ALANXOC3/RADICO8' '000000|'; feh x.png
 
-if [[ "$#" -eq 1 ]]; then
-    convert -size 1280x720 canvas:black \
-        -font PICO-8-mono-Regular -pointsize 16 -gravity northwest \
-        -fill '#29adff' -draw 'text 35,35 "RADICO8 - A PICO-8 RADIO"' \
-        -fill '#83769c' -draw 'text 35,60 "BY AMORG (ALAN@XOC3.IO)"' \
-        -fill '#c2c3c7' -draw 'text 35,110 "SUBMIT CARTS AT:"' \
-        -fill '#c2c3c7' -draw 'text 35,135 "GITHUB.COM/ALANXOC3/RADICO8"' \
-        -fill '#fff1e8' -draw 'text 35,185 "> ' \
-        -fill '#ff004d' -draw 'rectangle 66,185,81,205' \
-        "$DEST"
-else
-    NAME=$(basename "$SOURCE" | sed 's/\.p8\.png$//g' | tr '[:lower:]' '[:upper:]')
-    TITLE=$(sed -E 's/[-:.].+$//g' <<< "$NAME")
-    convert "$SOURCE" -scale 320% -background black -gravity center -extent 1280x720 -roll +350+0 \
-        -font PICO-8-mono-Regular -pointsize 16 -gravity northwest \
-        -fill '#29adff' -draw 'text 35,35 "RADICO8 - A PICO-8 RADIO"' \
-        -fill '#83769c' -draw 'text 35,60 "BY AMORG (ALAN@XOC3.IO)"' \
-        -fill '#c2c3c7' -draw 'text 35,110 "SUBMIT CARTS AT:"' \
-        -fill '#c2c3c7' -draw 'text 35,135 "GITHUB.COM/ALANXOC3/RADICO8"' \
-        -fill '#fff1e8' -draw 'text 35,185 "> LOAD #'"$NAME"'"' \
-        -fill '#c2c3c7' -draw 'text 35,210 "DOWNLOADING.. OK"' \
-        -fill '#ff77a8' -draw 'text 35,235 "'"$TITLE"'"' \
-        -fill '#fff1e8' -draw 'text 35,285 "> MUSIC('$TRACK')"' \
-        -fill '#fff1e8' -draw 'text 35,310 "> ' \
-        -fill '#ff004d' -draw 'rectangle 66,310,81,330' \
-        "$DEST"
-fi
+if [[ "$#" -lt 2 ]]; then echo 'USAGE: '$(basename $0)' <dest.gif> <src.p8.png> [<line>...]'; exit 1; fi
+
+DEST="$1"; shift
+SOURCE="$1"; shift
+
+ARGS=( )
+Y_VAL=35
+for arg in "$@"; do
+    fold_width=32
+    line_prefix=""
+    color="$(sed -E 's/\|.+$//g' <<< "$arg")"
+    txt="$(sed -E 's/^.+\|//g' <<< "$arg")"
+    if [[ "$txt" = '> '* ]]; then
+        # added extra space to simulate the cursor
+        txt="$(sed -E 's/^> //g' <<< "$txt ")"
+        fold_width=30
+        line_prefix="> "
+    fi
+
+    while IFS=$'\n' read -r line; do
+        ARGS+=( -fill '#'"$color" -draw "text 35,$Y_VAL \"$line_prefix$line\"" )
+        Y_VAL=$(expr $Y_VAL + 25)
+        if [[ -n "$line_prefix" ]]; then line_prefix="  "; fi
+    done <<< "$(fold -w $fold_width <<< "$txt")"
+done
+
+convert "$SOURCE" -scale 320% -background black -gravity center -extent 1280x720 -roll +350+0 \
+    -font PICO-8-mono-Regular -pointsize 16 -gravity northwest "${ARGS[@]}" \
+    -fill '#fff1e8' -draw 'text 35,'"$Y_VAL"' "> ' -fill '#ff004d' -draw "rectangle 66,$Y_VAL,81,$(expr $Y_VAL + 20)" \
+    "$DEST"

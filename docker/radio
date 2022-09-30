@@ -1,14 +1,15 @@
 #!/bin/bash
 # Starts the pico8 radio and generates metadat & image files needed for streaming.
 # Pico8 might generate some ALSA error messages we need to ignore.
-if [[ "$#" -ne 3 ]]; then echo 'USAGE: '$(basename "$0")' <cartridge-dir> <playlist-file> <fifo-pipe>'; exit 1; fi
+if [[ "$#" -ne 4 ]]; then echo 'USAGE: '$(basename "$0")' <pico8-exec-path> <cartridge-dir> <playlist-file> <fifo-pipe>'; exit 1; fi
 
-CART_DIR=$1
-PLAYLIST=$2
-FIFO=$3
+PICO8_EXECUTABLE=$1
+CART_DIR=$2
+PLAYLIST=$3
+FIFO=$4
 
 tail -f "$FIFO" | grep --line-buffered '' | \
-xvfb-run /opt/pico8/pico8 -accept_future 1 -root_path "$CART_DIR" -run $CART_DIR/radico8.p8 | \
+$PICO8_EXECUTABLE -accept_future 1 -root_path "$CART_DIR" -run "$CART_DIR/radico8" | \
 grep --line-buffered '' | \
 while read -r line; do
     if [[ "$line" = "---" ]]; then

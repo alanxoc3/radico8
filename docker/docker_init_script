@@ -2,11 +2,26 @@
 # Pulse audio should be started first. Pico8, icecast, and youtube all depend on this.
 pulseaudio -D --exit-idle-time=-1 2>/dev/null
 
-radio /cartridges /playlist.txt /radico8-playlist.pipe | grep --line-buffered '' | \
+radio /usr/bin/headless_pico8 /cartridges /playlist.txt /radico8-playlist.pipe | grep --line-buffered '' | \
 while read -r line; do
     cart=$(awk -F : '{print $1}' <<< "$line")
-    track=$(awk -F : '{print $2}' <<< "$line")
-    create_image out.gif "/cartridges/$cart.p8.png" "$track"
+    track=$(awk -F : '{print $2}' <<< "$line") 
+    name=$(tr '[:lower:]' '[:upper:]' <<< "$cart")
+    title=$(sed -E 's/[-:.].+$//g' <<< "$name")
+
+    create_image out.gif "/cartridges/$cart.p8.png" \
+        "29adff|RADICO8 - A PICO-8 RADIO" \
+        "83769c|BY AMORG (ALAN@XOC3.IO)" \
+        "000000|" \
+        "c2c3c7|SUBMIT CARTS AT:" \
+        "c2c3c7|GITHUB.COM/ALANXOC3/RADICO8" \
+        "000000|" \
+        "fff1e8|> LOAD #$name" \
+        "c2c3c7|DOWNLOADING.. OK" \
+        "ff77a8|$title" \
+        "000000|" \
+        "fff1e8|> MUSIC($track)"
+
     echo "PLAYING: #$cart -- $track"
 done
 

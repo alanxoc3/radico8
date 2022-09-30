@@ -59,7 +59,10 @@ function next_song()
     end
 
     if #g_playlist > 0 then
-        return unpack(deli(g_playlist,1))
+        -- there was an issue where a "colon" wasn't specified once, so radico8 crashed.
+        -- adding the "track or 0" here helps the radio be more resilient, because track could be nil.
+        local cart, track = unpack(deli(g_playlist,1))
+        return cart or "", track or 0
     end
 
     return "", 0
@@ -78,8 +81,9 @@ function load_round()
             if buff == "---" then
                 return playlist
             else
-                -- don't want to convert numbers, because some numbers are cart
+                -- don't want to convert numbers on split, because some numbers are cart
                 -- ids larger than the pico8 number limit, so they wrap to negative.
+                -- also, tonum doesn't return zero for nil.
                 local name, num = unpack(split(buff, ":", false))
                 add(playlist, {name, tonum(num, 0x4)})
                 buff=""

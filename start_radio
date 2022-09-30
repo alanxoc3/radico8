@@ -1,10 +1,10 @@
 #!/bin/bash
-if [[ "$#" -ne 4 ]]; then echo 'Usage: '$(basename "$0")' <pico-8-path> <docker-build-dir> <cartridges-path> <playlist-path>'; exit 1; fi
+if [[ "$#" -ne 4 ]]; then echo 'Usage: '$(basename "$0")' <docker-build-dir> <pico-8-path> <cartridges-path> <playlist-path>'; exit 1; fi
 
-PICO_PATH="$1"  # pico8 binary location
-DOCKER_DIR="$2" # directory with docker files
-CARTRIDGES="$3" # directory with .p8.png files
-PLAYLIST="$4"   # file with nl separated file/track pairs
+DOCKER_DIR="$1" # directory with docker files
+PICO_PATH="$2"  # pico8 binary location absolute
+CARTRIDGES="$3" # directory with .p8.png files absolute
+PLAYLIST="$4"   # file with nl separated file/track pairs absolute
 
 # container requires a UFW rule like this if you want to send traffic to localhost:
 # sudo ufw allow in on docker0 to any port XXXX
