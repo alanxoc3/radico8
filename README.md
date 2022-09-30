@@ -7,6 +7,8 @@ if you know some good pico-8 music, submit a pull request adding the lexaloffle 
 ## issues
 please create a github issue if the stream is down and i'll try to get it back up as soon as i can. you can submit issues for small feature suggestions and bugfixes too.
 
+giving credit to the actual artist of a song is a manual process. if a song is attributed to the wrong user please submit a pull request with the fix in the [playlist.txt](./playlist.txt) file.
+
 ## how it works
 - a headless instance of pico-8 is running inside a docker container.
 - pico-8 listens on stdin to figure out which carts it should play next.

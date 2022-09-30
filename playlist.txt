@@ -1,14 +1,17 @@
 # welcome to the playlist file.
 
 # comments are denoted with a "#" sign
-# format is: <cart-id>:<track-num>
+# format is: <cart-id>:<track-num>:<track-artist>
 # cart-id is located below the pico-8 cart at lexaloffle.com.
 # track-num is the track in that cart that contains your song.
+# track-artist can optionally overwrite the artist if different from the cart author.
+
 # cart tracks can be viewed by running "load #cart-id" in pico-8.
 
 # rules:
 # - keep this list in alpha-numeric order
 # - only post the cart the song originally came from
+# - only add an artist if different from author
 # - try adding a comment for numerical cart-ids
 # - please add good music :)
 
@@ -49,8 +52,8 @@ ahealthydoseofdungeon-5:0
 arcus_trigoni-0:0
 ascent-0:0 
 astropocalypse-0:31
-aztec-1:0
-aztec-1:10
+aztec-1:0:vavmusicmagic
+aztec-1:10:vavmusicmagic
 a_resolute_purpose-0:0
 birdandbeans-4:6
 birdswithguns-3:0
@@ -65,7 +68,7 @@ dank_tomb-0:0
 dimejegasu-2:0
 drakeblue_picospace-1:0
 fare_well-1:0
-fare_well-1:16
+fare_well-1:16:thegreatcadet
 fnf_dad:0
 fnf_halloween:0
 fnf_menu-6:0
@@ -81,7 +84,7 @@ fuz_v1-1:4
 fuz_v1-1:6
 ghostdogshort-1:0
 ghosthouse-0:13
-golfsunday-0:0
+golfsunday-0:0:gruber_music
 grippy-6:0
 grippy-6:21
 harold-6:0
@@ -139,13 +142,13 @@ squiddefence-4:9
 techno_utopian_edict-1:0
 terra_1cart-39:0
 terra_1cart-39:31
-thelair-0:15
+thelair-0:15:gruber_music
 the_lost_night-4:0
 to_a_starling_v1_1-5:1
 tunafishbucket-11:33
-undune2-3:12
-undune2_map1-3:0
-undune2_map1-3:6
+undune2-3:12:gruber_music
+undune2_map1-3:0:gruber_music
+undune2_map1-3:6:gruber_music
 violet-37:0
 white_ale_in_benin-0:0
 willo-0:3
