@@ -45,7 +45,7 @@ StartLimitBurst=15
 
 [Service]
 Restart=always
-ExecStartPre=sleep .5s # sleep so it's not restarted too fast
+ExecStartPre=sleep .5s
 ExecStart=docker exec -i --env-file /etc/radico8/youtube.env radico8 stream_to_youtube
 
 [Install]
@@ -64,7 +64,7 @@ StartLimitBurst=15
 
 [Service]
 Restart=always
-ExecStartPre=sleep .5s # sleep so it's not restarted too fast
+ExecStartPre=sleep .5s
 ExecStart=docker exec -i --env-file /etc/radico8/icecast.env radico8 stream_to_icecast host.docker.internal 8010
 
 [Install]
