@@ -10,7 +10,7 @@ function _init()
 end
 
 function load_song()
-    g_cartname, g_tracknum = next_song()
+    g_cartname, g_tracknum, g_artist = next_song()
     g_song_time = 0
     g_cur_track = g_tracknum
     g_tracks = {[g_cur_track]=true}
@@ -20,7 +20,7 @@ function load_song()
     reload(0x3100, 0x3100, 0x1200)
     if g_cartname ~= "" then
         reload(0x3100, 0x3100, 0x1200, g_cartname..".p8.png")
-        printh(g_cartname..":"..g_tracknum)
+        printh(g_cartname..":"..g_tracknum..":"..g_artist)
     end
     music(g_tracknum, 1000*FADE_IN_LENGTH)
 end
@@ -59,13 +59,10 @@ function next_song()
     end
 
     if #g_playlist > 0 then
-        -- there was an issue where a "colon" wasn't specified once, so radico8 crashed.
-        -- adding the "track or 0" here helps the radio be more resilient, because track could be nil.
-        local cart, track = unpack(deli(g_playlist,1))
-        return cart or "", track or 0
+        return unpack(deli(g_playlist,1))
     end
 
-    return "", 0
+    return "", 0, ""
 end
 
 function load_round()
@@ -80,11 +77,10 @@ function load_round()
             if buff == "---" then
                 return playlist
             else
-                -- don't want to convert numbers on split, because some numbers are cart
-                -- ids larger than the pico8 number limit, so they wrap to negative.
-                -- also, tonum doesn't return zero for nil.
-                local name, num = unpack(split(buff, ":", false))
-                add(playlist, {name, tonum(num, 0x4)})
+                -- there was an issue where a "colon" wasn't specified once, so radico8 crashed.
+                -- adding the defaults helps the radio be a bit more resilient.
+                local name, num, artist = unpack(split(buff, ":", false))
+                add(playlist, {name or "", tonum(num, 0x4) or 0, artist or ""})
                 buff=""
             end
         else

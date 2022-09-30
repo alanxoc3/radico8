@@ -5,7 +5,7 @@ PLAYLIST_PATH="$1"
 CARTS_PATH="$2"
 
 sanitize() {
-    sed -E 's/#.*$//g' | grep -E '.' | grep -vE '^:'
+    sed -E 's/#.*$//g' | sed -E 's/\s//g' | grep -E '.' | grep -vE '^:'
 }
 
 PLAYLIST=$(curl -s https://raw.githubusercontent.com/alanxoc3/radico8/main/playlist.txt | sanitize | sort -Vu)

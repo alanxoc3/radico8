@@ -6,35 +6,40 @@ radio /usr/bin/headless_pico8 /cartridges /playlist.txt /radico8-playlist.pipe |
 while read -r line; do
     cart=$(awk -F : '{print $1}' <<< "$line")
     track=$(awk -F : '{print $2}' <<< "$line") 
+    artist=$(awk -F : '{print $3}' <<< "$line" | tr '[:lower:]' '[:upper:]')
+
     name=$(tr '[:lower:]' '[:upper:]' <<< "$cart")
-    title=$(sed -E 's/[-:.].+$//g' <<< "$name")
+
+    title=$(grep -E '^title:' "/cartridges/$cart.txt" | sed -E 's/^[^:]+://' | tr '[:lower:]' '[:upper:]')
+    if [[ -z "$title" ]]; then title="$cart"; fi
+
+    author=$(grep -E '^author:' "/cartridges/$cart.txt" | sed -E 's/^[^:]+://' | tr '[:lower:]' '[:upper:]')
+    if [[ -z "$author" ]]; then author="???"; fi
+
+    date=$(grep -E '^ts:' "/cartridges/$cart.txt" | sed -E 's/^[^:]+://' | tr '[:lower:]' '[:upper:]' | awk '{print $1}')
+    if [[ -z "$date" ]]; then date="???"; fi
+
+    if [[ -z "$artist" ]]; then artist="$author"; fi
 
     create_image out.gif "/cartridges/$cart.p8.png" \
         "29adff|RADICO8 - A PICO-8 RADIO" \
-        "83769c|BY AMORG (ALAN@XOC3.IO)" \
         "000000|" \
         "c2c3c7|SUBMIT CARTS AT:" \
         "c2c3c7|GITHUB.COM/ALANXOC3/RADICO8" \
         "000000|" \
         "fff1e8|> LOAD #$name" \
         "c2c3c7|DOWNLOADING.. OK" \
-        "ff77a8|$title" \
         "000000|" \
-        "fff1e8|> MUSIC($track)"
+        "ff77a8|$title" \
+        "fff1e8|BY $author" \
+        "c2c3c7|ON $date" \
+        "000000|" \
+        "fff1e8|> MUSIC($track)" \
+        "c2c3c7|STREAMING.. OK" \
+        "000000|" \
+        "ff77a8|TRACK $track" \
+        "fff1e8|BY $artist" \
+        "000000|"
 
     echo "PLAYING: #$cart -- $track"
 done
-
-# todo: this explains how to update the track info in icecast:
-# https://icecast.org/docs/icecast-trunk/admin_interface/
-
-# possible new format:
-# > LOAD #12324
-# DOWNLOADING.. OK
-# THE GAME OF LIFE
-# 
-# > MUSIC(0)
-# UPLOADER: ALANXOC3
-# COMPOSER: GRUBER_MUSIC
-# 
-# > 

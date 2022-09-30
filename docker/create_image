@@ -4,7 +4,7 @@
 # i'm probably imitating pico8 too much here :)
 
 # to create the template image:
-# ./create_image template.gif blank.p8.png '29adff|RADICO8 - A PICO-8 RADIO' '83769c|BY AMORG (ALAN@XOC3.IO)' '000000|' 'c2c3c7|SUBMIT CARTS AT:' 'c2c3c7|GITHUB.COM/ALANXOC3/RADICO8' '000000|'; feh x.png
+# ./create_image template.gif "./blank.p8.png" "29adff|RADICO8 - A PICO-8 RADIO" "000000|" "c2c3c7|SUBMIT CARTS AT:" "c2c3c7|GITHUB.COM/ALANXOC3/RADICO8" "000000|"
 
 if [[ "$#" -lt 2 ]]; then echo 'USAGE: '$(basename $0)' <dest.gif> <src.p8.png> [<line>...]'; exit 1; fi
 
@@ -34,5 +34,11 @@ done
 
 convert "$SOURCE" -scale 320% -background black -gravity center -extent 1280x720 -roll +350+0 \
     -font PICO-8-mono-Regular -pointsize 16 -gravity northwest "${ARGS[@]}" \
-    -fill '#fff1e8' -draw 'text 35,'"$Y_VAL"' "> ' -fill '#ff004d' -draw "rectangle 66,$Y_VAL,81,$(expr $Y_VAL + 20)" \
-    "$DEST"
+    -fill '#fff1e8' -draw 'text 35,'"$Y_VAL"' "> ' \
+    /tmp/frame0.png
+
+convert /tmp/frame0.png \
+    -fill '#ff004d' -draw "rectangle 66,$Y_VAL,81,$(expr $Y_VAL + 20)" \
+    /tmp/frame1.png
+
+convert -loop 0 -delay 25 /tmp/frame0.png /tmp/frame1.png "$DEST"
