@@ -35,10 +35,10 @@ done
 convert "$SOURCE" -scale 320% -background black -gravity center -extent 1280x720 -roll +350+0 \
     -font PICO-8-mono-Regular -pointsize 16 -gravity northwest "${ARGS[@]}" \
     -fill '#fff1e8' -draw 'text 35,'"$Y_VAL"' "> ' \
-    /tmp/frame0.png
-
-convert /tmp/frame0.png \
     -fill '#ff004d' -draw "rectangle 66,$Y_VAL,81,$(expr $Y_VAL + 20)" \
-    /tmp/frame1.png
+    "$DEST"
 
-convert -loop 0 -delay 25 /tmp/frame0.png /tmp/frame1.png "$DEST"
+# convert /tmp/frame0.png \
+# /tmp/frame1.png
+
+# convert -loop 0 -delay 25 /tmp/frame0.png /tmp/frame1.png "$DEST"
