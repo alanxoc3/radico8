@@ -1,11 +1,15 @@
 #!/bin/bash
-if [[ "$#" -ne 0 ]] || [[ -z "$PASS" ]]; then echo 'USAGE: PASS=<password> '$(basename "$0"); exit 1; fi
+if [[ "$#" -ne 1 ]] || [[ -z "$PASS" ]]; then echo 'USAGE: PASS=<password> '$(basename "$0")' <url>'; exit 1; fi
+URL="$1"
+
+# Kill the ffmpeg instance this process spawns if it's already running.
+# Can cause connection issues with youtube if there are multiple running at the same time.
+kill -9 $(ps aux | grep ffmpeg | grep -F "$URL" | awk '{print $2}')
 
 VIDEO_FILE="out.gif"
 VBR="1500k"
 FPS="24"
 QUAL="superfast"
-YOUTUBE_URL="rtmp://a.rtmp.youtube.com/live2"
 
 # Most of this command came from this source:
 # https://www.radioforge.com/how-to-create-a-live-radio-on-youtube/
@@ -15,4 +19,4 @@ ffmpeg -nostdin -re -f lavfi -i "movie=filename=$VIDEO_FILE:loop=0, setpts=N/(FR
     -map_metadata:g 1:g \
     -vcodec libx264 -pix_fmt yuv420p -preset $QUAL -r $FPS -g $(($FPS * 2)) -b:v $VBR \
     -acodec libmp3lame -ar 44100 -threads 6 -qscale:v 3 -b:a 320000 -bufsize 512k \
-    -f flv "$YOUTUBE_URL/$PASS"
+    -f flv "$URL/$PASS"

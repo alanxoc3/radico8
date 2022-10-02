@@ -46,7 +46,26 @@ StartLimitBurst=15
 [Service]
 Restart=always
 ExecStartPre=sleep .5s
-ExecStart=docker exec -i --env-file /etc/radico8/youtube.env radico8 stream_to_youtube
+ExecStart=docker exec -i --env-file /etc/radico8/youtube.env radico8 stream_to_youtube rtmp://a.rtmp.youtube.com/live2
+
+[Install]
+WantedBy=radico8.service
+EOF
+
+cat << EOF > radico8-youtube-backup.service
+[Unit]
+Description=Streams radico8 to youtube backup url.
+After=radico8.service
+Requires=radico8.service
+
+# should be impossible to hit this throttle limit due to sleep
+StartLimitIntervalSec=5
+StartLimitBurst=15
+
+[Service]
+Restart=always
+ExecStartPre=sleep .5s
+ExecStart=docker exec -i --env-file /etc/radico8/youtube.env radico8 stream_to_youtube rtmp://b.rtmp.youtube.com/live2?backup=1
 
 [Install]
 WantedBy=radico8.service
@@ -116,5 +135,5 @@ popd
 
 echo "Reloading & restarting systemctl..."
 systemctl daemon-reload
-systemctl enable  radico8.service radico8-youtube.service radico8-icecast.service radico8-install-carts.timer radico8-reboot.timer radico8-reboot.service
-systemctl restart radico8.service radico8-youtube.service radico8-icecast.service radico8-install-carts.timer radico8-reboot.timer radico8-install-carts.service
+systemctl enable  radico8.service radico8-youtube.service radico8-youtube-backup.service radico8-icecast.service radico8-install-carts.timer radico8-reboot.timer radico8-reboot.service
+systemctl restart radico8.service radico8-youtube.service radico8-youtube-backup.service radico8-icecast.service radico8-install-carts.timer radico8-reboot.timer radico8-install-carts.service
