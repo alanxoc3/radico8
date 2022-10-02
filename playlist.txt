@@ -16,6 +16,11 @@
 # - please add good music :)
 
 10022:0  # hug arena
+15133:0  # celeste
+15133:10 # celeste
+15133:20 # celeste
+15133:30 # celeste
+15133:40 # celeste
 15666:0  # gruber jam
 17774:9  # Hybris
 17888:0  # hyrule castle
@@ -61,6 +66,7 @@ cab_ride-7:0
 cab_ride-7:16
 cab_ride-7:31
 celeste_classic_2-5:0
+cherrybomb-0:7:sebastian habler
 cr9fo3n3zusu7g7uxaxgw0blh56100:0
 crowded_dungeon_crawler-3:0
 crowded_dungeon_crawler-3:44
@@ -91,11 +97,12 @@ harold-6:0
 highstakes-2:1
 hotfoot-2:0
 hotfoot-2:17
+iii-2:0
 jigsaw_xmas-5:36
 katamari_christmassy-1:0
 katamari_christmassy-1:8
 kirbys_big_bean_blast-0:0
-loca_conda-1:12
+loca_conda-1:12:smellyfishstiks
 # marballs_2-0:3  # commenting out for now, will uncomment when single track repeat issue is fixed. these play for 5 minutes right now so it's very repetitive.
 # marballs_2-0:8  # commenting out for now, will uncomment when single track repeat issue is fixed. these play for 5 minutes right now so it's very repetitive.
 # marballs_2-0:12 # commenting out for now, will uncomment when single track repeat issue is fixed. these play for 5 minutes right now so it's very repetitive.
@@ -109,21 +116,25 @@ nacwseswahmmm-2:2
 minima-0:17
 myrrhs_edge-3:0
 neon-0:0
+pengo-1:1
 pico8_0112-0:0
-picochak-0:0
+picochak-0:0:n1k-o / stardust
 picochill-1:0
 picodepon-2:0
+piconiccc-1:0
 picotunes2-0:0
 picotunes2-0:6
 picotunes2-0:13
 picotunes2-0:21
 picotunes2-0:31
 picotunes2-0:49
+picowars-19:31
 pigments-0:0
 polarpanic-0:0
 polarpanic-0:2
 porklike-2:1
 poom_e1-7:0
+pullfrog-3:4
 rewob-9:8
 rewob-9:16
 rewob-9:24
@@ -144,7 +155,7 @@ terra_1cart-39:0
 terra_1cart-39:31
 thelair-0:15:gruber_music
 the_lost_night-4:0
-to_a_starling_v1_1-5:1
+to_a_starling_v1_1-5:1:gruber_music
 tunafishbucket-11:33
 undune2-3:12:gruber_music
 undune2_map1-3:0:gruber_music
@@ -154,3 +165,4 @@ white_ale_in_benin-0:0
 willo-0:3
 xmasfish-1:2
 xzero-3:0
+zzzv_excitebike-0:0
