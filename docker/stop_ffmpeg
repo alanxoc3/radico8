@@ -1,0 +1,5 @@
+#!/bin/bash
+# Stops ffmpeg. Useful for systemd to more correctly handle units.
+if [[ "$#" -ne 1 ]]; then echo 'USAGE: '$(basename "$0")' <unique-match>'; exit 1; fi
+UNIQUE_MATCH="$1"
+kill -9 $(ps aux | grep ffmpeg | grep -F "$UNIQUE_MATCH" | awk '{print $2}')

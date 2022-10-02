@@ -45,8 +45,10 @@ StartLimitBurst=15
 
 [Service]
 Restart=always
-ExecStartPre=sleep .5s
+ExecStartPre=-sleep .5s
+ExecStartPre=-docker exec -i radico8 stop_ffmpeg rtmp://a.rtmp.youtube.com/live2
 ExecStart=docker exec -i --env-file /etc/radico8/youtube.env radico8 stream_to_youtube rtmp://a.rtmp.youtube.com/live2
+ExecStop=docker exec -i radico8 stop_ffmpeg rtmp://a.rtmp.youtube.com/live2
 
 [Install]
 WantedBy=radico8.service
@@ -64,8 +66,10 @@ StartLimitBurst=15
 
 [Service]
 Restart=always
-ExecStartPre=sleep .5s
+ExecStartPre=-sleep .5s
+ExecStartPre=-docker exec -i radico8 stop_ffmpeg rtmp://b.rtmp.youtube.com/live2?backup=1
 ExecStart=docker exec -i --env-file /etc/radico8/youtube.env radico8 stream_to_youtube rtmp://b.rtmp.youtube.com/live2?backup=1
+ExecStop=docker exec -i radico8 stop_ffmpeg rtmp://b.rtmp.youtube.com/live2?backup=1
 
 [Install]
 WantedBy=radico8.service
@@ -83,8 +87,10 @@ StartLimitBurst=15
 
 [Service]
 Restart=always
-ExecStartPre=sleep .5s
+ExecStartPre=-sleep .5s
+ExecStartPre=-docker exec -i radico8 stop_ffmpeg icecast
 ExecStart=docker exec -i --env-file /etc/radico8/icecast.env radico8 stream_to_icecast host.docker.internal 8010
+ExecStop=docker exec -i radico8 stop_ffmpeg icecast
 
 [Install]
 WantedBy=radico8.service

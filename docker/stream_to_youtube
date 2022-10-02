@@ -2,10 +2,6 @@
 if [[ "$#" -ne 1 ]] || [[ -z "$PASS" ]]; then echo 'USAGE: PASS=<password> '$(basename "$0")' <url>'; exit 1; fi
 URL="$1"
 
-# Kill the ffmpeg instance this process spawns if it's already running.
-# Can cause connection issues with youtube if there are multiple running at the same time.
-kill -9 $(ps aux | grep ffmpeg | grep -F "$URL" | awk '{print $2}')
-
 VIDEO_FILE="out.gif"
 VBR="1500k"
 FPS="24"
