@@ -21,8 +21,8 @@ giving credit to the actual artist of a song is a manual process. if a song is a
 - the pico-8 console is rebooted every monday and whenever i push code updates.
 
 ## behavior
-- once radico8 notices a song is repeating, it will end the song in 20 seconds.
-- the max length a single song can play is 5 minutes, before radico8 will end the song.
+- a song will play until it stops or for about 10-15 seconds after it starts repeating.
+- the max length a single song can play is about 7 minutes, before radico8 will end the song.
 - radico8 shuffles the entire playlist then plays songs until every song has been played.
 
 ## todo

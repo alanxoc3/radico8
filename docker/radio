@@ -3,6 +3,10 @@
 # Pico8 might generate some ALSA error messages we need to ignore.
 if [[ "$#" -ne 4 ]]; then echo 'USAGE: '$(basename "$0")' <pico8-exec-path> <cartridge-dir> <playlist-file> <fifo-pipe>'; exit 1; fi
 
+sanitize() {
+    sed -E 's/#.*$|\s//g' | grep -vE '^:|^$' | sort -uV
+}
+
 PICO8_EXECUTABLE=$1
 CART_DIR=$2
 PLAYLIST=$3
@@ -12,9 +16,9 @@ tail -f "$FIFO" | grep --line-buffered '' | \
 $PICO8_EXECUTABLE -accept_future 1 -root_path "$CART_DIR" -run "$CART_DIR/radico8" | \
 grep --line-buffered '' | \
 while read -r line; do
-    if [[ "$line" = "---" ]]; then
-        cat "$PLAYLIST" | sort -u | shuf > "$FIFO"
-        echo "---" > "$FIFO" # triggers pico8 script that we are done here
+    if [[ "$line" = "###" ]]; then
+        cat "$PLAYLIST" | sanitize | shuf > "$FIFO"
+        echo "###" > "$FIFO" # triggers pico8 script that we are done here
     else
         echo "$line"
     fi

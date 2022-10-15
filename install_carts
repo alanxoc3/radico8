@@ -5,10 +5,10 @@ PLAYLIST_PATH="$1"
 CARTS_PATH="$2"
 
 sanitize() {
-    sed -E 's/#.*$//g' | sed -E 's/\s//g' | grep -E '.' | grep -vE '^:'
+    sed -E 's/#.*$|\s//g' | grep -vE '^:|^$' | sort -uV
 }
 
-PLAYLIST=$(curl -s https://raw.githubusercontent.com/alanxoc3/radico8/main/playlist.txt | sanitize | sort -Vu)
+PLAYLIST=$(curl -s https://raw.githubusercontent.com/alanxoc3/radico8/main/playlist.txt | sanitize)
 
 # found the pico8 api thanks to https://www.ebartsoft.com/pico8
 for cart in $(echo "$PLAYLIST" | awk -F : '{print $1}' | sort -u); do
