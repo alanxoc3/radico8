@@ -2,8 +2,8 @@
 MAX_SONG_TOTAL_LENGTH  = 60*7
 MAX_SONG_REPEAT_LENGTH = 10
 MAX_SONG_RAND_REPEAT_LENGTH = 5
-FADE_OUT_LENGTH = 1.5
-PAUSE_LENGTH = .25
+FADE_OUT_LENGTH = 1.25
+PAUSE_LENGTH = .75
 FADE_IN_LENGTH = 0
 
 function _init()
@@ -28,9 +28,8 @@ function load_song()
         g_song_len = 0
     end
 
+    g_pause_song_count = 0
     g_remaining_song_time = g_song_len
-    
-    music(g_tracknum, 1000*FADE_IN_LENGTH)
 end
 
 -- uncomment for debugging. not needed in production though.
@@ -46,22 +45,32 @@ end
 function _update60()
     local cur_track, cur_tick, is_music_playing = stat(54), stat(56), stat(57)
 
-    -- if not going to next song and (time is over or music is not playing), start next song count
-    -- add this for debugging: btnp(4) or btnp(5)
-    if not g_next_song_count and (g_remaining_song_time <= 0 or not is_music_playing) then
+    -- pause before we actually start playing the music
+    if g_pause_song_count then
+        if g_pause_song_count >= 60*PAUSE_LENGTH then
+            g_pause_song_count = nil
+            music(g_tracknum, 1000*FADE_IN_LENGTH)
+        end
+
+    -- give some time to fade out before loading the next song
+    elseif g_next_song_count then
+        if g_next_song_count >= 60*FADE_OUT_LENGTH then
+            g_next_song_count = nil
+            load_song()
+        end
+
+    -- if time is over or music is not playing, then start next song count
+    elseif btnp(4) or btnp(5) or g_remaining_song_time <= 0 or not is_music_playing then
         music(-1, 1000*FADE_OUT_LENGTH)
         g_next_song_count = 0
-    end
 
-    -- if prev song is done
-    if g_next_song_count and g_next_song_count >= 60*(FADE_OUT_LENGTH+PAUSE_LENGTH) then
-        g_next_song_count = nil
-        load_song()
+    elseif g_remaining_song_time then
+        g_remaining_song_time = max(0, g_remaining_song_time-1/60)
     end
 
     -- update timers
-    if g_next_song_count     then     g_next_song_count += 1    end
-    if g_remaining_song_time then g_remaining_song_time = max(0, g_remaining_song_time-1/60) end
+    if g_pause_song_count    then g_pause_song_count += 1 end
+    if g_next_song_count     then  g_next_song_count += 1 end
 end
 
 -- return song_len_in_seconds, does_song_repeat
