@@ -25,10 +25,6 @@ giving credit to the actual artist of a song is a manual process. if a song is a
 - the max length a single song can play is about 7 minutes, before radico8 will end the song.
 - radico8 shuffles the entire playlist then plays songs until every song has been played.
 
-## todo
-- maybe youtube api to auto rebroadcast stream when down
-- send track info to icecast
-
 ## credits
 - learn about pico-8: https://www.lexaloffle.com/pico-8.php
 - pico-8 font for youtube stream: https://www.lexaloffle.com/bbs/?tid=3760

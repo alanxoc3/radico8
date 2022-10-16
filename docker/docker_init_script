@@ -41,7 +41,10 @@ while read -r line; do
         "ff77a8|TRACK $track" \
         "fff1e8|BY $artist" \
         "c2c3c7|LEN ${minutes}m ${seconds}s [$loop]" \
-        "000000|"
+        "000000|" &
+
+    # only update the icecast stream if the executable was created by "stream_to_icecast"
+    which update_icecast_stream 2>/dev/null >/dev/null && update_icecast_stream "LOAD #$name; MUSIC($track) -- BY $artist" &
 
     echo "PLAYING: #$cart -- $track"
 done

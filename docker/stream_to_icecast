@@ -3,4 +3,18 @@ if [[ "$#" -ne 2 ]] || [[ -z "$PASS" ]]; then echo 'USAGE: PASS=<password> '$(ba
 
 SERVER="$1"
 PORT="$2"
-ffmpeg -nostdin -f alsa -i default -f ogg -metadata title='radico8 - a pico-8 radio' -metadata artist='various pico-8 artists' -metadata comment='github.com/alanxoc3/radico8' -content_type audio/ogg icecast://source:"$PASS"@"$SERVER":"$PORT"/stream.ogg
+
+# Create executable that allows you to update the stream title by just providing text:
+cat << EOF > /bin/update_icecast_stream
+#!/bin/bash
+if [[ "\$#" -ne 1 ]]; then echo 'USAGE: '\$(basename "\$0")' <title-text>'; exit 1; fi
+curl --get --data-urlencode mount=/stream.ogg \\
+    --data-urlencode mode=updinfo \\
+    --data-urlencode song="\$1" \\
+    "http://source:$PASS@$SERVER:$PORT/admin/metadata"
+EOF
+
+chmod 500 /bin/update_icecast_stream
+
+# Start stream:
+ffmpeg -nostdin -f alsa -i default -f ogg -metadata artist='RADICO8 - A PICO8 RADICO' -content_type audio/ogg icecast://source:"$PASS"@"$SERVER":"$PORT"/stream.ogg
