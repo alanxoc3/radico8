@@ -8,10 +8,11 @@ PORT="$2"
 cat << EOF > /bin/update_icecast_stream
 #!/bin/bash
 if [[ "\$#" -ne 1 ]]; then echo 'USAGE: '\$(basename "\$0")' <title-text>'; exit 1; fi
-curl --get --data-urlencode mount=/stream.ogg \\
+curl --get --silent \\
+    --data-urlencode mount=/stream.ogg \\
     --data-urlencode mode=updinfo \\
     --data-urlencode song="\$1" \\
-    "http://source:$PASS@$SERVER:$PORT/admin/metadata"
+    "http://source:$PASS@$SERVER:$PORT/admin/metadata" >/dev/null
 EOF
 
 chmod 500 /bin/update_icecast_stream
