@@ -26,7 +26,7 @@
 17888:0  # hyrule castle
 22377:1  # Super Poulet Poulet
 22377:28 # Super Poulet Poulet
-27415:0  # wizardish by 0xabad1dea
+27415:0:0xabad1dea # wizardish
 32957:0  # Cake Factory
 38440:0  # pico-8 tunes
 38440:6  # pico-8 tunes
