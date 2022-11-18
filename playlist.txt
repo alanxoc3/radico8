@@ -101,6 +101,8 @@ katamari_christmassy-1:0
 katamari_christmassy-1:8
 kirbys_big_bean_blast-0:0
 loca_conda-1:12:smellyfishstiks
+lukily-0:0:vavmusicmagic
+lukily-0:18:vavmusicmagic
 majodonuya-0:0
 marballs_2-0:3
 marballs_2-0:8
@@ -146,6 +148,7 @@ snowplower-1:0
 squiddefence-4:1
 squiddefence-4:9
 stabbycrabby-0:48
+supercboss-1:0
 techno_utopian_edict-1:0
 terra_1cart-39:0
 terra_1cart-39:31
