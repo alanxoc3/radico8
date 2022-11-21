@@ -73,6 +73,7 @@ crowded_dungeon_crawler-3:44
 dank_tomb-0:0
 dimejegasu-2:0
 drakeblue_picospace-1:0
+eightbitultimate-5:1
 f1f982e14be8211a11f58a5e307945-1:0
 fare_well-1:0
 fare_well-1:16:thegreatcadet
@@ -89,6 +90,7 @@ fuz_v1-1:4
 fuz_v1-1:6
 ghostdogshort-1:0
 ghosthouse-0:13
+ghostship-2:24
 golfsunday-0:0:gruber_music
 grippy-6:0
 grippy-6:21
