@@ -12,7 +12,7 @@
 # - keep this list in alpha-numeric order
 # - only post the cart the song originally came from
 # - only add an artist if different from author
-# - try adding a comment for numerical cart-ids
+# - try adding a comment for undescriptive cart-ids
 # - please add good music :)
 
 10022:0  # hug arena
