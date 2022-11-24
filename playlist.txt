@@ -22,6 +22,7 @@
 15133:30 # celeste
 15133:40 # celeste
 15666:1  # gruber jam
+16677:0  # gruber jam 2
 17774:9  # Hybris
 17888:0  # hyrule castle
 22377:1  # Super Poulet Poulet
@@ -73,6 +74,7 @@ crowded_dungeon_crawler-3:44
 dank_tomb-0:0
 dimejegasu-2:0
 drakeblue_picospace-1:0
+dupatijudu-0:0
 e052c47cdd8a388c8f142c5747e179:4
 eightbitultimate-5:1
 f1f982e14be8211a11f58a5e307945-1:0
@@ -121,6 +123,7 @@ minima-0:17
 myrrhs_edge-3:0
 nacwseswahmmm-2:2
 neon-0:0
+obir5mw4pkfy9x0h8so2zdpic7kjdu:5
 pengo-1:1
 pico8_0112-0:0
 picochak-0:0:n1k-o / stardust
