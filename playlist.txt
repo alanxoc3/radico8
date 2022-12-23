@@ -90,6 +90,18 @@ fnf_menu-6:0
 fnf_milf:0
 fnf_pico:0
 fnf_roses:0
+freezing_knights-7:0:ohcurtains # title
+freezing_knights_map-3:0:ohcurtains # map
+freezing_knights_rest-8:0:ohcurtains # rest
+freezing_knights_battle1-5:0:ohcurtains # normal battle (1 and 3 are the same)
+freezing_knights_battle2-7:0:ohcurtains # special battle
+freezing_knights_boss1-4:0:ohcurtains # each boss fight has a different song
+freezing_knights_boss2-4:0:ohcurtains
+freezing_knights_boss3-4:0:ohcurtains
+freezing_knights_boss4-4:0:ohcurtains
+freezing_knights_boss5-4:0:ohcurtains
+freezing_knights_boss6-4:0:ohcurtains
+freezing_knights_boss7-4:0:ohcurtains
 fsgupicozombiegarden121-0:8
 fsgupicozombiegarden121-0:47
 fuz_v1-1:0
@@ -151,6 +163,7 @@ poom_e1-7:0
 porklike-2:1
 pullfrog-3:4
 putt_puttbyloanwulfious-0:0
+qbert08-0:40
 rewob-9:24
 rewob-9:32
 rewob-9:40
