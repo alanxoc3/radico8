@@ -16,6 +16,7 @@
 # - please add good music :)
 
 10022:0  # hug arena
+12500:11 # marballs
 15133:0  # celeste
 15133:10 # celeste
 15133:20 # celeste
@@ -23,8 +24,10 @@
 15133:40 # celeste
 15666:1  # gruber jam
 16677:0  # gruber jam 2
+17208:2  #rainmaker
 17774:9  # Hybris
 17888:0  # hyrule castle
+20430:0  #pico-8 jam2
 22377:1  # Super Poulet Poulet
 22377:28 # Super Poulet Poulet
 27415:0:0xabad1dea # wizardish
@@ -47,12 +50,15 @@
 49232:11 # just one boss
 51707:0  # chrononaut
 52426:0  # danger zone
+54546:1  #crater
 55617:1  # hat on time
 56576:0  # mai chan
 56576:20 # mai chan
 56576:30 # mai chan
 64171:2  # curse of the lich king
 a0fc2b57210981b52a7d1a5818a98a:0
+aalpaca-2:0:gruber_music
+aalpaca-2:4:gruber_music
 abc-0:0
 abc-0:23
 ahealthydoseofdungeon-5:0
@@ -74,6 +80,8 @@ cr9fo3n3zusu7g7uxaxgw0blh56100:0
 crowded_dungeon_crawler-3:0
 crowded_dungeon_crawler-3:44
 dank_tomb-0:0
+decigobloopbloop-5:0
+decigobloopbloop-5:9
 dff2cc20b1d7b653766cd7823b2062:0
 dimejegasu-2:0
 drakeblue_picospace-1:0
@@ -90,6 +98,7 @@ fnf_menu-6:0
 fnf_milf:0
 fnf_pico:0
 fnf_roses:0
+freds72_snow-3:0:gruber_music
 freezing_knights-7:0:ohcurtains # title
 freezing_knights_map-3:0:ohcurtains # map
 freezing_knights_rest-8:0:ohcurtains # rest
