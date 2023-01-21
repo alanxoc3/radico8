@@ -16,6 +16,9 @@
 # - please add good music :)
 
 10022:0  # hug arena
+10767:0  # happy birthday jumps
+11511:0  # Droid Boots
+11606:0  # heavy snare worm
 12500:11 # marballs
 15133:0  # celeste
 15133:10 # celeste
@@ -24,12 +27,16 @@
 15133:40 # celeste
 15666:1  # gruber jam
 16677:0  # gruber jam 2
-17208:2  #rainmaker
+17208:2  # rainmaker
 17774:9  # Hybris
 17888:0  # hyrule castle
-20430:0  #pico-8 jam2
+20430:0  # pico-8 jam2
+21603:0  # Mistigri
+21603:19 # Mistigri
 22377:1  # Super Poulet Poulet
 22377:28 # Super Poulet Poulet
+23035:0  # The Slow and the Curious
+26895:5  # combopool
 27415:0:0xabad1dea # wizardish
 32957:0  # Cake Factory
 38440:0  # pico-8 tunes
@@ -47,10 +54,15 @@
 39950:14 # zeldo
 39950:43 # zeldo
 41286:0  # Mystic Realm Dizzy
+44252:0  # Hardcore platformer concept
+44252:8  # Hardcore platformer concept
+47457:0  # BOUNCE dot P8
+47457:1  # BOUNCE dot P8
+47457:6  # BOUNCE dot P8
 49232:11 # just one boss
 51707:0  # chrononaut
 52426:0  # danger zone
-54546:1  #crater
+54546:1  # crater
 55617:1  # hat on time
 56576:0  # mai chan
 56576:20 # mai chan
@@ -62,6 +74,8 @@ aalpaca-2:4:gruber_music
 abc-0:0
 abc-0:23
 ahealthydoseofdungeon-5:0
+anise_wheres_twig-2:24
+anise_wheres_twig-2:32
 arcus_trigoni-0:0:gruber_music
 ascent-0:0:vavmusicmagic
 astropocalypse-0:31
@@ -70,19 +84,23 @@ aztec-1:10:vavmusicmagic
 a_resolute_purpose-0:0
 birdandbeans-4:6
 birdswithguns-3:0
+blocks_for_life-0:0
 cab_ride-7:0
 cab_ride-7:16
 cab_ride-7:31
 cbb16c5ea507ffa5535df5a3c973e1:0
 celeste_classic_2-5:0
 cherrybomb-0:7:sebastian habler
+country_crosser-0:0
 cr9fo3n3zusu7g7uxaxgw0blh56100:0
 crowded_dungeon_crawler-3:0
 crowded_dungeon_crawler-3:44
+d16solais-0:0
 dank_tomb-0:0
 decigobloopbloop-5:0
 decigobloopbloop-5:9
 dff2cc20b1d7b653766cd7823b2062:0
+diggleoid-2:0
 dimejegasu-2:0
 drakeblue_picospace-1:0
 dupatijudu-0:0
@@ -92,6 +110,7 @@ eightbitultimate-5:1
 f1f982e14be8211a11f58a5e307945-1:0
 fare_well-1:0
 fare_well-1:16:thegreatcadet
+flagdemo-1:0
 fnf_dad:0
 fnf_halloween:0
 fnf_menu-6:0
@@ -143,6 +162,7 @@ marballs_2-0:14
 marballs_2-0:19
 marballs_2-0:27
 marballs_2-0:41
+marballs_2_custom-1:8
 mddcn07uic4xnw1t88wfub5oe3b066:0
 mellow-2:3
 minima-0:17
@@ -179,6 +199,7 @@ rewob-9:40
 rewob-9:48 # credits
 rewob-9:56
 seinsim-0:18
+shapeofmind-2:0:gruber_music
 shootingstar-2:0
 shovelknightmusic-0:0
 snakator-0:0
@@ -202,5 +223,6 @@ white_ale_in_benin-0:0
 willo-0:3
 wojiranega-0:0
 xmasfish-1:2
+xmaspatterns-3:0
 xzero-3:0
 zzzv_excitebike-0:0
