@@ -11,6 +11,20 @@ youtube changes the video url everytime the stream goes down unless you use the 
 
 giving credit to the actual artist of a song is a manual process. if a song is attributed to the wrong user please submit a pull request with the fix in the [playlist.txt](./playlist.txt) file.
 
+## how it works
+- a headless instance of pico-8 is running inside a docker container.
+- pico-8 listens on stdin to figure out which carts it should play next.
+- a shell script listens on stdout of pico-8 to produce the youtube video image.
+- ffmpeg listens to any audio produced in the docker container and forwards it to icecast and youtube.
+- a cron job runs every hour to load playlist updates into the radio.
+- carts are downloaded as p8.png images directly from lexaloffle.
+- the pico-8 console is rebooted every monday and whenever i push code updates.
+
+## behavior
+- a song will play until it stops or for about 10-15 seconds after it starts repeating.
+- the max length a single song can play is about 7 minutes, before radico8 will end the song.
+- radico8 shuffles the entire playlist then plays songs until every song has been played.
+
 ## running locally
 you can run the radio locally on a linux system. here are the steps:
 
@@ -38,20 +52,6 @@ hotfoot-2:0:0:34:repeat:
 seinsim-0:18:0:16:repeat:
 ...
 ```
-
-## how it works
-- a headless instance of pico-8 is running inside a docker container.
-- pico-8 listens on stdin to figure out which carts it should play next.
-- a shell script listens on stdout of pico-8 to produce the youtube video image.
-- ffmpeg listens to any audio produced in the docker container and forwards it to icecast and youtube.
-- a cron job runs every hour to load playlist updates into the radio.
-- carts are downloaded as p8.png images directly from lexaloffle.
-- the pico-8 console is rebooted every monday and whenever i push code updates.
-
-## behavior
-- a song will play until it stops or for about 10-15 seconds after it starts repeating.
-- the max length a single song can play is about 7 minutes, before radico8 will end the song.
-- radico8 shuffles the entire playlist then plays songs until every song has been played.
 
 ## credits
 - learn about pico-8: https://www.lexaloffle.com/pico-8.php
