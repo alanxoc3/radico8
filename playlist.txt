@@ -163,7 +163,6 @@ mddcn07uic4xnw1t88wfub5oe3b066:0
 mellow-2:3
 minima-0:17
 myrrhs_edge-3:0
-nacwseswahmmm-2:2
 neon-0:0
 obir5mw4pkfy9x0h8so2zdpic7kjdu:5
 oracles_inn-0:0
@@ -221,11 +220,12 @@ wojiranega-0:0
 xzero-3:0
 zzzv_excitebike-0:0
 
-# christmas carts
+# christmas carts - uncomment around thanksgiving
 # decigobloopbloop-5:0
 # decigobloopbloop-5:9
 # jigsaw_xmas-5:36
 # katamari_christmassy-1:0
 # katamari_christmassy-1:8
+# nacwseswahmmm-2:2
 # xmasfish-1:2
 # xmaspatterns-3:0
