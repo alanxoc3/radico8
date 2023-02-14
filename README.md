@@ -30,7 +30,9 @@ radico8.p8
 > ./install_carts ./playlist.txt cartridges
 Saved size: 212 212 3665
 
-# and finally, run the radio! this opens up pico8 with your song (there is no ui right now).
+# and finally, run the radio!
+# this opens up pico8 and loads carts/songs on demand.
+# also listens to changes in the playlist.txt file (good for a 24/7 radio).
 > ./local-radio /opt/pico8/pico8 cartridges playlist.txt
 hotfoot-2:0:0:34:repeat:
 seinsim-0:18:0:16:repeat:
