@@ -33,14 +33,14 @@ function load_song()
 end
 
 -- uncomment for debugging. not needed in production though.
--- function _draw()
---     cls()
--- 
---     local minutes = ((g_remaining_song_time or 0)+.5)\1\60
---     local seconds = ((g_remaining_song_time or 0)+.5)\1%60
---     print(minutes.."m", 64, 60, 7)
---     print(seconds.."s", 64, 68, 7)
--- end
+function _draw()
+    cls()
+
+    local minutes = ((g_remaining_song_time or 0)+.5)\1\60
+    local seconds = ((g_remaining_song_time or 0)+.5)\1%60
+    print(minutes.."m", 64, 60, 7)
+    print(seconds.."s", 64, 68, 7)
+end
 
 function _update60()
     local cur_track, cur_tick, is_music_playing = stat(54), stat(56), stat(57)
