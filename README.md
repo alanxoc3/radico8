@@ -14,7 +14,7 @@ giving credit to the actual artist of a song is a manual process. if a song is a
 ## running locally
 you can run the radio locally on a linux system. here are the steps:
 
-``
+```
 # check your directory.
 > ls
 cartridges docker Dockerfile install_carts install_to_server LICENSE local-radio playlist.txt README.md remote-radio
@@ -35,7 +35,7 @@ Saved size: 212 212 3665
 hotfoot-2:0:0:34:repeat:
 seinsim-0:18:0:16:repeat:
 ...
-``
+```
 
 ## how it works
 - a headless instance of pico-8 is running inside a docker container.
