@@ -27,7 +27,7 @@ radico8.p8
 # perform a 1 time download of the carts listed in the playlist file.
 # running this script multiple times will skip carts that are already downloaded.
 # this populates the cartridges directory with ".p8" and ".txt" files and removes comments/formatting from the playlist.txt file.
-> ./install_carts ./playlist.txt cartridges #
+> ./install_carts ./playlist.txt cartridges
 Saved size: 212 212 3665
 
 # and finally, run the radio! this opens up pico8 with your song (there is no ui right now).
