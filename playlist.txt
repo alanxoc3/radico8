@@ -97,8 +97,6 @@ crowded_dungeon_crawler-3:0
 crowded_dungeon_crawler-3:44
 d16solais-0:0
 dank_tomb-0:0
-decigobloopbloop-5:0
-decigobloopbloop-5:9
 dff2cc20b1d7b653766cd7823b2062:0
 diggleoid-2:0
 dimejegasu-2:0
@@ -148,9 +146,6 @@ hotfoot-2:0
 hotfoot-2:17
 iii-2:0
 intoruins-2:0
-jigsaw_xmas-5:36
-katamari_christmassy-1:0
-katamari_christmassy-1:8
 kirbys_big_bean_blast-0:0
 loca_conda-1:12:smellyfishstiks
 lukily-0:0:vavmusicmagic
@@ -223,7 +218,14 @@ violet-37:0
 white_ale_in_benin-0:0
 willo-0:3
 wojiranega-0:0
-xmasfish-1:2
-xmaspatterns-3:0
 xzero-3:0
 zzzv_excitebike-0:0
+
+# christmas carts
+# decigobloopbloop-5:0
+# decigobloopbloop-5:9
+# jigsaw_xmas-5:36
+# katamari_christmassy-1:0
+# katamari_christmassy-1:8
+# xmasfish-1:2
+# xmaspatterns-3:0
