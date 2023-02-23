@@ -13,6 +13,7 @@
 # - only post the cart the song originally came from
 # - only add an artist if different from author
 # - try adding a comment for undescriptive cart-ids
+# - christmas tunes go at the bottom of the list
 # - please add good music :)
 
 10022:0  # hug arena
@@ -39,6 +40,7 @@
 26895:5  # combopool
 27415:0:0xabad1dea # wizardish
 32957:0  # Cake Factory
+36321:0  # tiny dr piccolo
 38440:0  # pico-8 tunes
 38440:6  # pico-8 tunes
 38440:14 # pico-8 tunes
@@ -84,7 +86,9 @@ aztec-1:10:vavmusicmagic
 a_resolute_purpose-0:0
 birdandbeans-4:6
 birdswithguns-3:0
+blasteroids-1:14
 blocks_for_life-0:0
+busybee-0:0
 cab_ride-7:0
 cab_ride-7:16
 cab_ride-7:31
@@ -147,6 +151,7 @@ highstakes-2:1
 hotfoot-2:0
 hotfoot-2:17
 iii-2:0
+industrialmusic-0:0
 intoruins-2:0
 kirbys_big_bean_blast-0:0
 loca_conda-1:12:smellyfishstiks
@@ -210,6 +215,8 @@ terra_1cart-39:31
 thelair-0:15:gruber_music
 the_lost_night-4:0
 to_a_starling_v1_1-5:1:gruber_music
+trioremastered-0:1  # intro song
+trioremastered-0:13 # another song
 tunafishbucket-11:33
 undune2-3:12:gruber_music
 undune2_map1-3:0:gruber_music
