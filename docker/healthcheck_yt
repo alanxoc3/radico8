@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Make http request to check if stream is live.
+# If live, canonical link tag should be:
+# <link rel="canonical" href="https://www.youtube.com/watch?v=your_video_id">
+# If not live, canonical link tag should be:
+# <link rel="canonical" href="https://www.youtube.com/channel/your_channel_id">
+wget -q --output-document - "https://www.youtube.com/@${CHANNEL_NAME}/live" \
+	| grep -Eo "<link rel=\"canonical\" href=\"https://www\.youtube\.com/watch\?v="
+
+IS_LIVE=$?
+
+# Stream is up
+if [ ${IS_LIVE} -eq 0 ]; then
+	exit 0
+fi
+
+# Stream is not up
+systemctl restart radico8-youtube.service radico8-youtube-backup.service
+
+EXIT_CODE=$?
+
+if [ ${EXIT_CODE} -ne 0 ]; then
+	exit ${EXIT_CODE}
+fi
