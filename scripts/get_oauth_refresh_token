@@ -1,0 +1,16 @@
+#!/bin/bash
+# Need CLIENT_ID and CLIENT_SECRET set.
+if [[ -z "$CLIENT_ID" ]] || [[ -z "$CLIENT_SECRET" ]]; then
+    echo 'You need the "CLIENT_ID" and "CLIENT_SECRET" environment variables set.'
+    echo 'Go through the confusing google documentation to figure that out: https://developers.google.com/youtube/v3/live/getting-started'
+fi
+
+echo 'Put this into your browser, then enter the code.'
+echo "https://accounts.google.com/o/oauth2/auth?client_id=${CLIENT_ID}&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fyoutube"
+read -p 'CODE: ' AUTHORIZATION_CODE
+
+REFRESH_TOKEN=$(curl -sX POST \
+-d "code=${AUTHORIZATION_CODE}&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&redirect_uri=urn:ietf:wg:oauth:2.0:oob&grant_type=authorization_code" \
+https://accounts.google.com/o/oauth2/token | jq -r .refresh_token)
+
+echo "REFRESH_TOKEN: ${REFRESH_TOKEN}"

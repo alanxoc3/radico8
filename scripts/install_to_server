@@ -15,7 +15,7 @@ cp cartridges/radico8.p8 ${TARGET_DIR}/cartridges
 
 rsync -r docker/ ${TARGET_DIR}/docker
 cp Dockerfile ${TARGET_DIR}/Dockerfile
-cp install_carts remote-radio ${TARGET_DIR}
+cp scripts/install_carts scripts/remote-radio ${TARGET_DIR}
 
 echo "Installing systemd scripts..."
 pushd /etc/systemd/system

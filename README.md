@@ -29,10 +29,6 @@ giving credit to the actual artist of a song is a manual process. if a song is a
 you can run the radio locally on a linux system. here are the steps:
 
 ```
-# check your directory.
-> ls
-cartridges docker Dockerfile install_carts install_to_server LICENSE local-radio playlist.txt README.md remote-radio
-
 # the radico8 p8/lua files should be in the cartridges directory.
 > ls cartridges | grep radico8
 radico8.lua
@@ -41,13 +37,13 @@ radico8.p8
 # perform a 1 time download of the carts listed in the playlist file.
 # running this script multiple times will skip carts that are already downloaded.
 # this populates the cartridges directory with ".p8" and ".txt" files and removes comments/formatting from the playlist.txt file.
-> ./install_carts ./playlist.txt cartridges
+> ./scripts/install_carts ./playlist.txt cartridges
 Saved size: 212 212 3665
 
 # and finally, run the radio!
 # this opens up pico8 and loads carts/songs on demand.
 # also listens to changes in the playlist.txt file (good for a 24/7 radio).
-> ./local-radio /opt/pico8/pico8 cartridges playlist.txt
+> ./scripts/local-radio /opt/pico8/pico8 cartridges playlist.txt
 hotfoot-2:0:0:34:repeat:
 seinsim-0:18:0:16:repeat:
 ...
