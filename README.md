@@ -70,7 +70,7 @@ radico8 could be setup on any linux machine, but it is a bit of a manual process
    - make sure you have a file at: /etc/radico8/icecast.env
    - the file content would be:
      PASS=<youtube-stream-token>
-     CHANNEL_ID=<youtube-channel-id>
+     CHANNEL_NAME=<youtube-channel-id>
 4. run this script: install_to_server
    - it may require some tweaking since it's designed for a specific setup
    - systemd services: radico8 radico8-icecast radico8-youtube radico8-youtube-backup
