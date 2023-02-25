@@ -85,9 +85,6 @@ Requires=radico8-youtube.service radico8-youtube-backup.service
 [Service]
 Type=oneshot
 ExecStart=docker exec -i --env-file /etc/radico8/youtube.env radico8 healthcheck_yt
-
-[Install]
-WantedBy=multi-user.target
 EOF
 
 cat << EOF > radico8-youtube-healthcheck.timer
