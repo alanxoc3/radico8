@@ -53,6 +53,37 @@ seinsim-0:18:0:16:repeat:
 ...
 ```
 
+## running the server
+radico8 is currently hosted on a tiny arch-linux linode instance along with some other things. there are 4 parts to the server setup:
+
+- the local-radio (pico8 running within a bash script)
+- the cart install script (timer that downloads cart data when playlist.txt updates)
+- the youtube stream (ffmpeg forwarding audio+picture into youtube stream)
+- the webradio stream (ffmpeg forwarding audio to existing icecast installation
+
+radico8 could be setup on any linux machine, but it is a bit of a manual process. here are the general steps:
+
+```
+1. ensure you have the docker daemon installed & running
+2. if you want to host a webradio:
+   - ensure you have icecast installed: https://icecast.org/
+   - make sure you have a file at: /etc/radico8/icecast.env
+   - the file content would be:
+     PASS=<icecast-stream-token>
+3. if you want to host a youtube stream:
+   - make sure you have a file at: /etc/radico8/icecast.env
+   - the file content would be:
+     PASS=<youtube-stream-token>
+     CHANNEL_ID=<youtube-stream-token>
+4. run this script: install_to_server
+   - it may require some tweaking since it's designed for a specific setup
+   - systemd services: radico8 radico8-icecast radico8-youtube radico8-youtube-backup
+   - systemd timers: radico8-install-carts radico8-reboot radico8-youtube-healthcheck
+5. use systemd to manage the radico8 server:
+   - initial install of carts: systemctl restart radico8-install-carts
+   - restart radico8: systemctl restart radico8
+```
+
 ## credits
 - learn about pico-8: https://www.lexaloffle.com/pico-8.php
 - pico-8 font for youtube stream: https://www.lexaloffle.com/bbs/?tid=3760
