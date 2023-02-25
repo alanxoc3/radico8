@@ -15,8 +15,11 @@ if [ ${IS_LIVE} -eq 0 ]; then
 	exit 0
 fi
 
+# For testing, just print whether the stream is up first.
+echo Stream is not up: "$(date)"
+
 # Stream is not up
-systemctl restart radico8-youtube.service radico8-youtube-backup.service
+# systemctl restart radico8-youtube.service radico8-youtube-backup.service
 
 EXIT_CODE=$?
 

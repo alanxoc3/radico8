@@ -76,29 +76,6 @@ ExecStop=docker exec -i radico8 stop_ffmpeg rtmp://b.rtmp.youtube.com/live2?back
 WantedBy=radico8.service
 EOF
 
-cat << EOF > radico8-youtube-healthcheck.service
-[Unit]
-Description=Check health of YouTube live channel
-After=radico8-youtube.service radico8-youtube-backup.service
-Requires=radico8-youtube.service radico8-youtube-backup.service
-
-[Service]
-Type=oneshot
-ExecStart=docker exec -i --env-file /etc/radico8/youtube.env radico8 healthcheck_yt
-EOF
-
-cat << EOF > radico8-youtube-healthcheck.timer
-[Unit]
-Description=Timer for radico8-youtube-healthcheck.service
-
-[Timer]
-OnBootSec=15min
-OnUnitActiveSec=15min
-
-[Install]
-WantedBy=timers.target
-EOF
-
 cat << EOF > radico8-icecast.service
 [Unit]
 Description=Streams radico8 to icecast.
@@ -115,6 +92,30 @@ ExecStartPre=-sleep .5s
 ExecStartPre=-docker exec -i radico8 stop_ffmpeg icecast
 ExecStart=docker exec -i --env-file /etc/radico8/icecast.env radico8 stream_to_icecast host.docker.internal 8010
 ExecStop=docker exec -i radico8 stop_ffmpeg icecast
+
+[Install]
+WantedBy=radico8.service
+EOF
+
+############## TIMERS ################
+cat << EOF > radico8-youtube-healthcheck.service
+[Unit]
+Description=Check health of YouTube live channel
+
+[Service]
+Type=oneshot
+ExecStart=${TARGET_DIR}/healthcheck_yt
+
+[Install]
+WantedBy=radico8.service
+EOF
+
+cat << EOF > radico8-youtube-healthcheck.timer
+[Unit]
+Description=Timer for radico8-youtube-healthcheck.service
+
+[Timer]
+OnUnitActiveSec=15min
 
 [Install]
 WantedBy=radico8.service
