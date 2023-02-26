@@ -10,7 +10,7 @@ PLAYLIST="$4"   # file with nl separated file/track pairs absolute
 # sudo ufw allow in on docker0 to any port XXXX
 
 echo 'BUILDING DOCKER'
-docker build "$DOCKER_DIR" -f radico8.docker -t radico8
+docker build "$DOCKER_DIR" -f "$DOCKER_DIR/radico8.docker" -t radico8
 
 echo 'KILLING PREVIOUS CONTAINER'
 docker kill radico8 2>/dev/null
