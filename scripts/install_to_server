@@ -14,7 +14,7 @@ cp cartridges/radico8.lua ${TARGET_DIR}/cartridges
 cp cartridges/radico8.p8 ${TARGET_DIR}/cartridges
 
 rsync -r docker/ ${TARGET_DIR}/docker
-cp Dockerfile ${TARGET_DIR}/Dockerfile
+cp radico8.docker ${TARGET_DIR}/radico8.docker
 cp scripts/install_carts scripts/remote-radio ${TARGET_DIR}
 
 echo "Installing systemd scripts..."
@@ -98,29 +98,6 @@ WantedBy=radico8.service
 EOF
 
 ############## TIMERS ################
-cat << EOF > radico8-youtube-healthcheck.service
-[Unit]
-Description=Check health of YouTube live channel
-
-[Service]
-Type=oneshot
-ExecStart=${TARGET_DIR}/healthcheck_yt
-
-[Install]
-WantedBy=radico8.service
-EOF
-
-cat << EOF > radico8-youtube-healthcheck.timer
-[Unit]
-Description=Timer for radico8-youtube-healthcheck.service
-
-[Timer]
-OnUnitActiveSec=15min
-
-[Install]
-WantedBy=radico8.service
-EOF
-
 cat << EOF > radico8-install-carts.service
 [Unit]
 Description=Installs recent list of carts.

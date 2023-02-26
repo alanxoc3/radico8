@@ -1,6 +1,8 @@
 #!/bin/bash
-if [[ -z "$CHANNEL_NAME" ]]; then
-    echo 'USAGE: CHANNEL_NAME=<channel-name> '$(basename "$0")
+# simple check to see if a youtube livestream is up
+
+if [[ "$#" -ne 1 ]]; then
+    echo 'USAGE: '$(basename "$0")' <channel-name>'
     exit 1
 fi
 
@@ -9,18 +11,13 @@ fi
 # <link rel="canonical" href="https://www.youtube.com/watch?v=your_video_id">
 # If not live, canonical link tag should be:
 # <link rel="canonical" href="https://www.youtube.com/channel/your_channel_id">
-wget -q --output-document - "https://www.youtube.com/@${CHANNEL_NAME}/live" \
-	| grep -qEo "<link rel=\"canonical\" href=\"https://www\.youtube\.com/watch\?v="
+curl -s "https://www.youtube.com/@${1}/live" \
+    | grep -qEo "<link rel=\"canonical\" href=\"https://www\.youtube\.com/watch\?v="
 
-# Stream is up
 if [ $? -eq 0 ]; then
     echo 'stream is up!'
-	exit 0
+    exit 0
 else
-    # For testing, just print whether the stream is up first.
     echo 'stream is down!'
-
-    # But really, we'll want to restart something:
-    # systemctl restart radico8-youtube.service radico8-youtube-backup.service
     exit 1
 fi

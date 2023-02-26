@@ -1,0 +1,37 @@
+#!/bin/bash
+# Updates youtube live stream with a few radico8 properties:
+# public, title, description, but most importantly is to disable auto stream shutdown
+
+if [[ -z "$CLIENT_ID" ]] || [[ -z "$CLIENT_SECRET" ]] || [[ -z "$REFRESH_TOKEN" ]]; then
+    echo 'USAGE: CLIENT_ID=x CLIENT_SECRET=x REFRESH_TOKEN=x '$(basename "$0")
+    echo 'Client ID and token are done by setting up an oauth app with google: https://developers.google.com/identity/protocols/oauth2'
+    echo 'Refresh token can be generated from script: get_oauth_refresh_token'
+    exit 1
+fi
+
+TOKEN=$(curl -s --request POST --data "client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET&refresh_token=$REFRESH_TOKEN&grant_type=refresh_token" https://accounts.google.com/o/oauth2/token | jq -r .access_token)
+BROADCAST_ID=$(curl -s 'https://youtube.googleapis.com/youtube/v3/liveBroadcasts?mine=true' -H "Authorization: Bearer $TOKEN" | jq -r '.items[] | select(.status.lifeCycleStatus == "live") | .id')
+echo "broadcast id: $BROADCAST_ID"
+
+DATA=$(cat << EOF | jq -c
+{
+    "id": "$BROADCAST_ID",
+    "snippet": {
+        "title": "radico8 - a pico-8 radio available 24/7",
+        "description": "not working? try this: https://www.youtube.com/@alanxoc3/live\nstill not working? try this: http://radico8.xoc3.io\nsubmissions/issues/feedback: https://github.com/alanxoc3/radico8"
+    },
+    "status": {
+        "privacyStatus": "public"
+    },
+    "contentDetails": {
+        "enableAutoStop": false,
+        "monitorStream": {
+            "enableMonitorStream": true,
+            "broadcastStreamDelayMs": 60000
+        }
+    }
+}
+EOF
+)
+
+curl -X PUT -sH "Authorization: Bearer $TOKEN" -d "$DATA" 'https://youtube.googleapis.com/youtube/v3/liveBroadcasts?part=snippet&part=contentDetails&part=status' --compressed --header 'Content-Type: application/json'

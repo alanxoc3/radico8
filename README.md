@@ -67,14 +67,16 @@ radico8 could be setup on any linux machine, but it is a bit of a manual process
    - the file content would be:
      PASS=<icecast-stream-token>
 3. if you want to host a youtube stream:
-   - make sure you have a file at: /etc/radico8/icecast.env
+   - setup a youtube stream, use these scripts to help:
+     - ./get_oauth_refresh_token
+     - ./update_youtube_broadcast
+   - make sure you have a file at: /etc/radico8/youtube.env
    - the file content would be:
      PASS=<youtube-stream-token>
-     CHANNEL_NAME=<youtube-channel-id>
 4. run this script: install_to_server
    - it may require some tweaking since it's designed for a specific setup
    - systemd services: radico8 radico8-icecast radico8-youtube radico8-youtube-backup
-   - systemd timers: radico8-install-carts radico8-reboot radico8-youtube-healthcheck
+   - systemd timers: radico8-install-carts radico8-reboot
 5. use systemd to manage the radico8 server:
    - initial install of carts: systemctl restart radico8-install-carts
    - restart radico8: systemctl restart radico8

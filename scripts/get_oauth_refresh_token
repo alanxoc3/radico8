@@ -14,3 +14,8 @@ REFRESH_TOKEN=$(curl -sX POST \
 https://accounts.google.com/o/oauth2/token | jq -r .refresh_token)
 
 echo "REFRESH_TOKEN: ${REFRESH_TOKEN}"
+
+# Note, this is how you would convert that refresh token into a token:
+# curl --request POST \
+# --data "client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET&refresh_token=$REFRESH_TOKEN&grant_type=refresh_token" \
+# https://accounts.google.com/o/oauth2/token
