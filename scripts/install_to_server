@@ -14,8 +14,8 @@ cp cartridges/radico8.lua ${TARGET_DIR}/cartridges
 cp cartridges/radico8.p8 ${TARGET_DIR}/cartridges
 
 rsync -r docker/ ${TARGET_DIR}/docker
+rsync -r scripts/ ${TARGET_DIR}/scripts
 cp radico8.docker ${TARGET_DIR}/radico8.docker
-cp scripts/install_carts scripts/remote-radio ${TARGET_DIR}
 
 echo "Installing systemd scripts..."
 pushd /etc/systemd/system
@@ -27,7 +27,7 @@ Requires=docker.service
 
 [Service]
 Restart=always
-ExecStart=${TARGET_DIR}/remote-radio ${TARGET_DIR} /opt/pico8 ${TARGET_DIR}/cartridges ${TARGET_DIR}/playlist.txt
+ExecStart=${TARGET_DIR}/scripts/remote-radio ${TARGET_DIR} /opt/pico8 ${TARGET_DIR}/cartridges ${TARGET_DIR}/playlist.txt
 ExecStop=docker kill radico8
 
 [Install]
@@ -103,7 +103,7 @@ cat << EOF > radico8-install-carts.service
 Description=Installs recent list of carts.
 
 [Service]
-ExecStart=${TARGET_DIR}/install_carts /srv/radico8/playlist.txt /srv/radico8/cartridges
+ExecStart=${TARGET_DIR}/scripts/install_carts /srv/radico8/playlist.txt /srv/radico8/cartridges
 EOF
 
 cat << EOF > radico8-install-carts.timer
