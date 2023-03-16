@@ -131,7 +131,6 @@ fnf_menu-6:0
 fnf_milf:0
 fnf_pico:0
 fnf_roses:0
-freds72_snow-3:0:gruber_music
 freezing_knights-7:0:ohcurtains # title
 freezing_knights_map-3:0:ohcurtains # map
 freezing_knights_rest-8:0:ohcurtains # rest
@@ -243,10 +242,11 @@ zzzv_excitebike-0:0
 # christmas carts - uncomment around thanksgiving
 # decigobloopbloop-5:0
 # decigobloopbloop-5:9
+# freds72_snow-3:0:gruber_music
 # jigsaw_xmas-5:36
 # katamari_christmassy-1:0
 # katamari_christmassy-1:8
 # nacwseswahmmm-2:2
+# snowplower-1:0
 # xmasfish-1:2
 # xmaspatterns-3:0
-# snowplower-1:0
