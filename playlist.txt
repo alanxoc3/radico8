@@ -62,6 +62,7 @@
 47457:1  # BOUNCE dot P8
 47457:6  # BOUNCE dot P8
 49232:11 # just one boss
+51509:5  # video poker
 51707:0  # chrononaut
 52426:0  # danger zone
 54546:1  # crater
@@ -115,6 +116,10 @@ dimejegasu-2:0
 digger-2:1
 digger-2:13
 dotmaze-2:8
+#dragondot3-4:0
+#dragondot3-4:19
+#dragondot3-4:22
+#dragondot3-4:23
 drakeblue_picospace-1:0
 dupatijudu-0:0
 e052c47cdd8a388c8f142c5747e179:4
@@ -162,6 +167,9 @@ highstakes-2:1
 hotfoot-2:0
 hotfoot-2:17
 iii-2:0
+i_just_wanna_land_v3-2:0
+i_just_wanna_land_v3-2:10
+i_just_wanna_land_v3-2:20
 industrialmusic-0:0
 intoruins-2:0
 kirbys_big_bean_blast-0:0
@@ -169,6 +177,7 @@ loca_conda-1:12:smellyfishstiks
 lukily-0:0:vavmusicmagic
 lukily-0:18:vavmusicmagic
 majodonuya-0:0
+mapuzzle-2:0
 marballs_2-0:3
 marballs_2-0:8
 marballs_2-0:12
@@ -185,6 +194,7 @@ neon-0:0
 newschoolreunion-0:0
 obir5mw4pkfy9x0h8so2zdpic7kjdu:5
 oracles_inn-0:0
+parumahpipoop-0:0 # kung poo fighter
 pengo-1:1
 pico8_0112-0:0
 picochak-0:0:n1k-o / stardust
@@ -227,6 +237,7 @@ terra_1cart-39:31
 thelair-0:15:gruber_music
 the_lost_night-4:0
 to_a_starling_v1_1-5:1:gruber_music
+tower-2:0
 treeplanting_adventure-0:0
 treeplanting_adventure-0:2
 treeplanting_adventure-0:11
@@ -245,6 +256,7 @@ xzero-3:0
 zzzv_excitebike-0:0
 
 # christmas carts - uncomment around thanksgiving
+# bingle_jells:0
 # decigobloopbloop-5:0
 # decigobloopbloop-5:9
 # freds72_snow-3:0:gruber_music
