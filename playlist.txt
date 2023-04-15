@@ -27,6 +27,15 @@
 15133:30 # celeste
 15133:40 # celeste
 15666:1  # gruber jam
+16503:0  # 9 songs in pico8
+16503:11 # 9 songs in pico8
+16503:16 # 9 songs in pico8
+16503:22 # 9 songs in pico8
+16503:27 # 9 songs in pico8
+16503:33 # 9 songs in pico8
+16503:37 # 9 songs in pico8
+16503:43 # 9 songs in pico8
+16503:53 # 9 songs in pico8
 16677:0  # gruber jam 2
 17208:2  # rainmaker
 17774:9  # Hybris
@@ -87,6 +96,8 @@ aztec-1:10:vavmusicmagic
 a_resolute_purpose-0:0
 b59f05150046ecc40e515efaf1d463:0
 bal-2:15
+bbb_01_aesc-0:4
+bbb_01_aesc-0:32
 birdandbeans-4:6
 birdswithguns-3:0
 blasteroids-1:14
@@ -116,11 +127,14 @@ dimejegasu-2:0
 digger-2:1
 digger-2:13
 dotmaze-2:8
-#dragondot3-4:0
-#dragondot3-4:19
-#dragondot3-4:22
-#dragondot3-4:23
+dragondot3-4:0
+dragondot3-4:19
+dragondot3-4:22
+dragondot3-4:23
 drakeblue_picospace-1:0
+dungeon-0:0
+dungeon-0:21
+dungeon-0:31
 dupatijudu-0:0
 e052c47cdd8a388c8f142c5747e179:4
 ed424b2f9a51b699b4c07ddf505e47:4
@@ -189,6 +203,7 @@ marballs_2_custom-1:8
 mddcn07uic4xnw1t88wfub5oe3b066:0
 mellow-2:3
 minima-0:17
+minotaur_v1-0:0
 myrrhs_edge-3:0
 neon-0:0
 newschoolreunion-0:0
@@ -227,6 +242,7 @@ shapeofmind-2:0:gruber_music
 shootingstar-2:0
 shovelknightmusic-0:0
 snakator-0:0
+sokovirus-0:0
 squiddefence-4:1
 squiddefence-4:9
 stabbycrabby-0:48
