@@ -25,7 +25,7 @@ FIFO="$HOME/.cache/radico8.fifo"
 # - pico8 reads from the fifo (stdin)
 # - when all songs in the playlist have been played, check the playlist file for any changes and go back to step 1.
 tail -f "$FIFO" | grep --line-buffered '' | \
-$PICO8_EXECUTABLE -accept_future 1 -root_path "$CART_DIR" -run "$CART_DIR/radico8" | \
+SDL_VIDEODRIVER=dummy $PICO8_EXECUTABLE -accept_future 1 -root_path "$CART_DIR" -run "$CART_DIR/radico8" | \
 grep --line-buffered '' | \
 while read -r line; do
     if [[ "$line" = "###" ]]; then

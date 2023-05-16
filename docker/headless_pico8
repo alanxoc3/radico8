@@ -1,2 +1,2 @@
 #!/bin/bash
-xvfb-run /opt/pico8/pico8 "$@"
+SDL_VIDEODRIVER=dummy /opt/pico8/pico8 "$@"
