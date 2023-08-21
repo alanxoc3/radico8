@@ -65,6 +65,8 @@
 39950:14 # zeldo
 39950:43 # zeldo
 41286:0  # Mystic Realm Dizzy
+41422:0  # 8 legs to love
+41422:2  # 8 legs to love
 44252:0  # Hardcore platformer concept
 44252:8  # Hardcore platformer concept
 47457:0  # BOUNCE dot P8
@@ -88,9 +90,11 @@ abc-0:0
 abc-0:23
 age_of_ants-7:0
 ahealthydoseofdungeon-5:0
+ameliascastle-0
 anise_wheres_twig-2:24
 anise_wheres_twig-2:32
 arcus_trigoni-0:0:gruber_music
+artorius-1:4
 ascent-0:0:vavmusicmagic
 astropocalypse-0:31
 aztec-1:0:vavmusicmagic
@@ -100,7 +104,13 @@ b59f05150046ecc40e515efaf1d463:0
 bal-2:15
 bbb_01_aesc-0:4
 bbb_01_aesc-0:32
-beckon_the_hellspawn-2:0
+beatwise_trigger-1
+beatwise_trigger-1:0
+beatwise_trigger-1:16
+beatwise_trigger-1:32
+beatwise_trigger-1:48
+beckon_the_hellspawn-3
+beckon_the_hellspawn-3:0
 birdandbeans-4:6
 birdswithguns-3:0
 blasteroids-1:14
@@ -108,11 +118,16 @@ blocks_for_life-0:0
 boomerangbetty-0:0
 boomerangbetty-0:12
 boomerangbetty-0:26
+boulderrun-5
+boulderrun-5:2
+boulderrun-5:32
+brainlessblobs-0:2
+breakdown-1:0
+bulletheck2-0:4
 busybee-0:0
 buttonpresser-0:0
 buttonpresser-0:12 # credit song is awesome
 c0cab7153df3ae77ee19a638ac5e60:0
-ca19eb950abefd2247401d439c0617:0
 ca19eb950abefd2247401d439c0617:0
 cab_ride-7:0
 cab_ride-7:16
@@ -125,35 +140,57 @@ caped_feline_arena-4:37:rych-t
 cb4dbdabcf18aaf8f407417d5fc221:7
 cbb5d319347ac82353527aa32b3a2d:0
 cbb16c5ea507ffa5535df5a3c973e1:0
-cbb16c5ea507ffa5535df5a3c973e1:0
 celeste_classic_2-5:0
 cherrybomb-0:7:sebastian habler
+coiledhairgirl-1:6
 country_crosser-0:0
 cr9fo3n3zusu7g7uxaxgw0blh56100:0
 crowded_dungeon_crawler-3:0
 crowded_dungeon_crawler-3:44
+crowd-2:0
 d0fe76f5e94bce61b2a2cf03288c8e:0
 d16solais-0:0
+damuhujuje-0:0
+dancejab-0:1
+dancejab-0:17
+dancejab-0:20
 dank_tomb-0:0
 dff2cc20b1d7b653766cd7823b2062:0
 digger-2:1
 digger-2:13
 diggleoid-2:0
 dimejegasu-2:0
+dimensionaljump-0:2
+dimensionaljump-0:21
+dimensionaljump-0:29
+dimensionaljump-0:45
+dimensionaljump-0:53
+dinkykong-0:0
+dinkykong-0:3
+dinkykong-0:11
+dinkykong-0:19
+dinkykong-0:25
+donswelt_musashi-2:0
 dotmaze-2:8
 dragondot3-4:0
 dragondot3-4:19
 dragondot3-4:22
 dragondot3-4:23
 drakeblue_picospace-1:0
+dubayubeno-3:0
 dungeon-0:0
 dungeon-0:21
 dungeon-0:31
 dupatijudu-0:0
+e2da047d14ad58bb1e84849b42e911:0
 e052c47cdd8a388c8f142c5747e179:4
 e02923ecb10608f0033ada26c3ce8f:1
-e2da047d14ad58bb1e84849b42e911:0
 ed424b2f9a51b699b4c07ddf505e47:4
+egypt-3:0
+egypt-3:9
+egypt-3:15
+egypt-3:17
+egypt-3:19
 eightbitultimate-5:1
 f1f982e14be8211a11f58a5e307945-1:0
 f4391580ee36dcaa70058510822e:0
@@ -161,12 +198,17 @@ fare_well-1:0
 fare_well-1:16:thegreatcadet
 fb194658a9fe79be1c44bce6a4a327:0
 feline_frenzy_3-2:1
+fighter_street_ii-1:0
+fighter_street_ii-1:2
 fnf_dad:0
 fnf_halloween:0
 fnf_menu-6:0
 fnf_milf:0
 fnf_pico:0
 fnf_roses:0
+fomgeyufu-0:0
+fomgeyufu-0:4
+fomgeyufu-0:8
 freezing_knights-7:0:ohcurtains # title
 freezing_knights_battle1-5:0:ohcurtains # normal battle (1 and 3 are the same)
 freezing_knights_battle2-7:0:ohcurtains # special battle
@@ -179,6 +221,12 @@ freezing_knights_boss6-4:0:ohcurtains
 freezing_knights_boss7-4:0:ohcurtains
 freezing_knights_map-3:0:ohcurtains # map
 freezing_knights_rest-8:0:ohcurtains # rest
+froggohats-1:0
+froggohats-1:10
+froggohats-1:20
+froggohats-1:53
+froggohats-1:55
+froggohats-1:63
 fsgupicozombiegarden121-0:8
 fsgupicozombiegarden121-0:47
 fuz_v1-1:0
@@ -187,9 +235,12 @@ fuz_v1-1:6
 ghostdogshort-1:0
 ghosthouse-0:13
 ghostship-2:24
+gobhiratu-0:0
 golfsunday-0:0:gruber_music
+grandmothership-4:0
 grippy-6:0
 grippy-6:21
+guncho-3:6
 harold-6:0
 harvesttataki-0:2 # Harvest Tataki Play song LD52 :-)
 highstakes-2:1
@@ -201,7 +252,18 @@ intoruins-2:0
 i_just_wanna_land_v3-2:0
 i_just_wanna_land_v3-2:10
 i_just_wanna_land_v3-2:20
+jostitle-7:2  # jack of spades
+jostitle-7:7  # jack of spades
+jostitle-7:14 # jack of spades
+jostitle-7:19 # jack of spades
+jostitle-7:23 # jack of spades
+jostitle-7:28 # jack of spades
 kirbys_big_bean_blast-0:0
+kugelblitz-0:0
+kugelblitz-0:10
+kugelblitz-0:21
+kugelblitz-0:28
+kugelblitz-0:30
 loca_conda-1:12:smellyfishstiks
 lukily-0:0:vavmusicmagic
 lukily-0:18:vavmusicmagic
@@ -219,15 +281,29 @@ mddcn07uic4xnw1t88wfub5oe3b066:0
 mellow-2:3
 minima-0:17
 minotaur_v1-0:0
+mot_taxi-2:2
+mousemaze-1:9
+ms_astro_galaxy_prix-2:0
+ms_astro_galaxy_prix-2:1
+ms_astro_galaxy_prix-2:5
+ms_astro_galaxy_prix-2:15
+ms_astro_galaxy_prix-2:23
+ms_astro_galaxy_prix-2:33
 myrrhs_edge-3:0
 neon-0:0
 newschoolreunion-0:0
+new_attack-2:0
+new_attack-2:18
+ntofebow-0:0
 obir5mw4pkfy9x0h8so2zdpic7kjdu:5
 olden_peak-0:0
 olden_peak-0:8
 olden_peak-0:20
 olden_peak-0:36
 oracles_inn-0:0
+orbys-0:0
+orbys-0:40
+orul-0:0
 paperdalseifluffyfashion-2:0
 parumahpipoop-0:0 # kung poo fighter
 pengo-1:1
@@ -236,46 +312,93 @@ picochak-0:0:n1k-o / stardust
 picochill-1:0
 picodepon-2:0
 picodriller-0:22
+picohot-0:2
 piconiccc-1:0
+picotennis2-0:0
 picotunes2-0:0
 picotunes2-0:6
 picotunes2-0:13
 picotunes2-0:21
 picotunes2-0:31
 picotunes2-0:49
+picoware-20:1
 picowars-19:31
+picozelda-2:0
+picozelda-2:8
+picozelda-2:20
+picozelda-2:24
 pigments-0:0
+pinballvania-2:0
+pixel_td-0:0
+pixel_td-0:16
+pixel_td-0:40
+planet_song_kaiba-0:0
 playerpiano-4:0
 polarpanic-0:0
 polarpanic-0:2
 poom_e1-7:0
 porklike-2:1
+project_echidna-1:0
+project_echidna-1:6
+project_echidna-1:11
+project_echidna-1:19
+project_echidna-1:25
+project_echidna-1:31
+project_echidna-1:51
 pullfrog-3:4
 putt_puttbyloanwulfious-0:0
 qbert08-0:40
 railblazerost-0:0
+remco_hextrade-1:0
+remco_hextrade-1:24
+renai_circulation_wip-0:19
 rewob-9:24
 rewob-9:32
 rewob-9:40
 rewob-9:48 # credits
 rewob-9:56
+rm_sonic-0:0
+rollpanda-2:4
+rollpanda-2:9
+rollpanda-2:24
+royegukimu-0:2
 seinsim-0:18
 shapeofmind-2:0:gruber_music
 shootingstar-2:0
 shovelknightmusic-0:0
+slimeyjump-2:1
+slimeyjump-2:4
+slimeyjump-2:10
+slimeyjump-2:25
+slimeyjump-2:30
+slimeyjump-2:40
+slimeyjump-2:45
 snakator-0:0
 sokovirus-0:0
+sonic2_emeraldhillzone_2-0:0
+sonic_25_sage-0:7
 spacelizards-0:0:gruber_music
+sprout_jam_edition-0:0
+sprout_jam_edition-0:8
 squiddefence-4:1
 squiddefence-4:9
 stabbycrabby-0:48
 statroulette-0:0
+stuck_in_the_sewers-6:1
+stuck_in_the_sewers-6:19
 supercboss-1:0
+supercontrahot-0:0
 techno_utopian_edict-1:0
 terra_1cart-39:0
 terra_1cart-39:31
+tetrafabrika-2:0
+tetrafabrika-2:4
 thelair-0:15:gruber_music
+thevisitor-0:0
+thevisitor-0:25
+thevisitor-0:41
 the_lost_night-4:0
+tinygolfpuzzles-1:0
 tower-2:0
 to_a_starling_v1_1-5:1:gruber_music
 treeplanting_adventure-0:0
@@ -285,14 +408,35 @@ trioremastered-0:1  # intro song
 trioremastered-0:13 # another song
 tunafishbucket-11:33
 turbofight-1:0
+ufo-0:0
+ufo-0:10
+ufo-0:11
+ufo-0:13
 undune2-3:12:gruber_music
 undune2_map1-3:0:gruber_music
 undune2_map1-3:6:gruber_music
 violet-37:0
 white_ale_in_benin-0:0
 willo-0:3
+witchcrafttd-6:0
+witchlovesbullets-3:0
+witchlovesbullets-3:16
+witchlovesbullets-3:34
+witchlovesbullets-3:44
 wojiranega-0:0
+xvst-0:0
+xvst-0:11
+xvst-0:14
 xzero-3:0
+yemehosajo-1:0
+yemehosajo-1:23
+yemehosajo-1:24
+yemehosajo-1:26
+yemehosajo-1:28
+yemehosajo-1:30
+yemehosajo-1:32
+zubgubblers-0:3
+zubgubblers-0:19
 zzzv_excitebike-0:0
 
 # christmas carts - uncomment around thanksgiving
