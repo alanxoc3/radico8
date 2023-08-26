@@ -254,6 +254,11 @@ jostitle-7:14 # jack of spades
 jostitle-7:19 # jack of spades
 jostitle-7:23 # jack of spades
 jostitle-7:28 # jack of spades
+jungleping-1:1
+jungleping-1:10
+jungleping-1:11
+jungleping-1:12
+jungleping-1:15
 kirbys_big_bean_blast-0:0
 kugelblitz-0:0
 kugelblitz-0:10
