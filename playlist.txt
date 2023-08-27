@@ -73,6 +73,9 @@
 47457:1  # BOUNCE dot P8
 47457:6  # BOUNCE dot P8
 49232:11 # just one boss
+51156:0  # Orbiter Suite
+51156:19 # Orbiter Suite
+51156:35 # Orbiter Suite
 51509:5  # video poker
 51707:0  # chrononaut
 52426:0  # danger zone
@@ -101,6 +104,7 @@ aztec-1:10:vavmusicmagic
 a_resolute_purpose-0:0
 b59f05150046ecc40e515efaf1d463:0
 bal-2:15
+bayfmtrafficupdates-0:0
 bbb_01_aesc-0:4
 bbb_01_aesc-0:32
 beatwise_trigger-1:0
@@ -151,6 +155,8 @@ dancejab-0:1
 dancejab-0:17
 dancejab-0:20
 dank_tomb-0:0
+deep:0
+deep:10
 dff2cc20b1d7b653766cd7823b2062:0
 digger-2:1
 digger-2:13
@@ -166,6 +172,7 @@ dinkykong-0:3
 dinkykong-0:11
 dinkykong-0:19
 dinkykong-0:25
+dokepyzi-0:0
 donswelt_musashi-2:0
 dotmaze-2:8
 dragondot3-4:0
@@ -178,6 +185,7 @@ dungeon-0:0
 dungeon-0:21
 dungeon-0:31
 dupatijudu-0:0
+dzlovesjw-0:0
 e2da047d14ad58bb1e84849b42e911:0
 e052c47cdd8a388c8f142c5747e179:4
 e02923ecb10608f0033ada26c3ce8f:1
@@ -188,6 +196,8 @@ egypt-3:15
 egypt-3:17
 egypt-3:19
 eightbitultimate-5:1
+escalatorworld-0:0
+escalatorworld-0:56
 f1f982e14be8211a11f58a5e307945-1:0
 f4391580ee36dcaa70058510822e:0
 fare_well-1:0
@@ -438,14 +448,18 @@ yemehosajo-1:30
 yemehosajo-1:32
 zubgubblers-0:3
 zubgubblers-0:19
+zuduwoyoji-0:0
 zzzv_excitebike-0:0
 
 # christmas carts - uncomment around thanksgiving
+# aps-6:0
 # bingle_jells:0
 # decigobloopbloop-5:0
 # decigobloopbloop-5:9
 # freds72_snow-3:0:gruber_music
 # jigsaw_xmas-5:36
+# jumper-3:0
+# jumper-3:10
 # katamari_christmassy-1:0
 # katamari_christmassy-1:8
 # nacwseswahmmm-2:2
