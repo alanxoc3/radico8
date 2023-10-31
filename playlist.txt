@@ -103,9 +103,9 @@ aztec-1:0:vavmusicmagic
 aztec-1:10:vavmusicmagic
 a_resolute_purpose-0:0
 b59f05150046ecc40e515efaf1d463:0
-bb9176547a3e8195906751ae839ca7:0
 bal-2:15
 bayfmtrafficupdates-0:0
+bb9176547a3e8195906751ae839ca7:0
 bbb_01_aesc-0:4
 bbb_01_aesc-0:32
 beatwise_trigger-1:0
@@ -277,6 +277,9 @@ kugelblitz-0:21
 kugelblitz-0:28
 kugelblitz-0:30
 loca_conda-1:12:smellyfishstiks
+loki_ssurge_menu-3:18
+loki_ssurge_stage1-3:0
+loki_ssurge_stage1-3:32
 lukily-0:0:vavmusicmagic
 lukily-0:18:vavmusicmagic
 majodonuya-0:0
@@ -306,6 +309,7 @@ neon-0:0
 newschoolreunion-0:0
 new_attack-2:0
 new_attack-2:18
+ne_on_demonei-0:0
 ntofebow-0:0
 obir5mw4pkfy9x0h8so2zdpic7kjdu:5
 olden_peak-0:0
@@ -398,6 +402,7 @@ stabbycrabby-0:48
 statroulette-0:0
 stuck_in_the_sewers-6:1
 stuck_in_the_sewers-6:19
+suika_demake-9:1
 supercboss-1:0
 supercontrahot-0:0
 techno_utopian_edict-1:0
@@ -453,17 +458,17 @@ zuduwoyoji-0:0
 zzzv_excitebike-0:0
 
 # christmas carts - uncomment around thanksgiving
-# aps-6:0
-# bingle_jells:0
-# decigobloopbloop-5:0
-# decigobloopbloop-5:9
-# freds72_snow-3:0:gruber_music
-# jigsaw_xmas-5:36
-# jumper-3:0
-# jumper-3:10
-# katamari_christmassy-1:0
-# katamari_christmassy-1:8
-# nacwseswahmmm-2:2
-# snowplower-1:0
-# xmasfish-1:2
-# xmaspatterns-3:0
+aps-6:0
+bingle_jells:0
+decigobloopbloop-5:0
+decigobloopbloop-5:9
+freds72_snow-3:0:gruber_music
+jigsaw_xmas-5:36
+jumper-3:0
+jumper-3:10
+katamari_christmassy-1:0
+katamari_christmassy-1:8
+nacwseswahmmm-2:2
+snowplower-1:0
+xmasfish-1:2
+xmaspatterns-3:0
