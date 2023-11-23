@@ -87,6 +87,7 @@
 64171:2  # curse of the lich king
 a0fc2b57210981b52a7d1a5818a98a:0
 a60336fd48f10c44984732100c182c:0
+a8be7d84a82bcd9afbf747f687fba8:0
 aalpaca-2:0:gruber_music
 aalpaca-2:4:gruber_music
 abc-0:0
@@ -156,8 +157,10 @@ dancejab-0:1
 dancejab-0:17
 dancejab-0:20
 dank_tomb-0:0
+db443214f6843439a12a003f32789a:0
 deep:0
 deep:10
+dfd8f150b23184229ca596f48aa3b8:0
 dff2cc20b1d7b653766cd7823b2062:0
 digger-2:1
 digger-2:13
@@ -200,7 +203,9 @@ eightbitultimate-5:1
 escalatorworld-0:0
 escalatorworld-0:56
 f1f982e14be8211a11f58a5e307945-1:0
+f28bb5005225ac6ececf5a2c4bc75b:0
 f4391580ee36dcaa70058510822e:0
+ff41abb7b3cac9703b93de229fb087:8
 fare_well-1:0
 fare_well-1:16:thegreatcadet
 fb194658a9fe79be1c44bce6a4a327:0
