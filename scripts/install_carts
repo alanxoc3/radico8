@@ -14,14 +14,17 @@ PLAYLIST=$(curl -s https://raw.githubusercontent.com/alanxoc3/radico8/main/playl
 for cart in $(echo "$PLAYLIST" | awk -F : '{print $1}' | sort -u); do
     fullcartpath="$CARTS_PATH/$cart.p8.png"
     if [[ ! -f "$fullcartpath" ]] || [[ ! -s "$fullcartpath" ]]; then
-        url="http://www.lexaloffle.com/bbs/get_cart.php?cat=7&play_src=2&lid=$cart"
+        url="https://www.lexaloffle.com/bbs/get_cart.php?cat=7&play_src=2&lid=$cart"
         echo "CART DOWNLOAD: $url"
         wget "$url" -O "$fullcartpath"
+
+        echo "SLEEP zzz"  # be polite to the server!
+        sleep 5.00  # 3s is still too frequent -- many ERROR 429
     fi
 
     infocartpath="$CARTS_PATH/$cart.txt"
     if [[ ! -f "$infocartpath" ]] || [[ ! -s "$infocartpath" ]]; then
-        url="http://www.lexaloffle.com/bbs/cpost_lister3.php?lid=$cart"
+        url="https://www.lexaloffle.com/bbs/cpost_lister3.php?lid=$cart"
         echo "TEXT DOWNLOAD: $url"
         wget "$url" -O "$infocartpath"
     fi
