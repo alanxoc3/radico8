@@ -38,6 +38,7 @@
 16503:53 # 9 songs in pico8
 16677:0  # gruber jam 2
 17208:2  # rainmaker
+17726:0  # babysteps
 17774:9  # Hybris
 17888:0  # hyrule castle
 20430:0  # pico-8 jam2
@@ -47,7 +48,9 @@
 22377:28 # Super Poulet Poulet
 23035:0  # The Slow and the Curious
 26895:5  # combopool
+27211:9  # pico monsters
 27415:0:0xabad1dea # wizardish
+29009:0  # duck duck on the loose
 32957:0  # Cake Factory
 36321:0  # tiny dr piccolo
 38440:0  # pico-8 tunes
@@ -81,6 +84,7 @@
 52426:0  # danger zone
 54546:1  # crater
 55617:1  # hat on time
+55986:0  # web pilot
 56576:0  # mai chan
 56576:20 # mai chan
 56576:30 # mai chan
@@ -125,6 +129,8 @@ boulderrun-5:2
 boulderrun-5:32
 brainlessblobs-0:2
 breakdown-1:0
+bubblegum_spin:0
+bubblegum_spin:16
 bulletheck2-0:4
 busybee-0:0
 buttonpresser-0:0
@@ -272,6 +278,9 @@ jostitle-7:14 # jack of spades
 jostitle-7:19 # jack of spades
 jostitle-7:23 # jack of spades
 jostitle-7:28 # jack of spades
+juicio:0
+juicio:24
+juicio:44
 jungleping-1:1
 jungleping-1:10
 jungleping-1:11
@@ -301,6 +310,7 @@ marballs_2-0:41
 marballs_2_custom-1:8
 mddcn07uic4xnw1t88wfub5oe3b066:0
 mellow-2:3
+mer_ork:0
 minima-0:17
 minotaur_v1-0:0
 mot_taxi-2:2
@@ -350,6 +360,9 @@ picozelda-2:0
 picozelda-2:8
 picozelda-2:20
 picozelda-2:24
+pico_pirates:0
+pico_pirates:19
+pico_pirates:29
 pigments-0:0
 pinballvania-2:0
 pixel_td-0:0
@@ -372,6 +385,8 @@ pullfrog-3:4
 putt_puttbyloanwulfious-0:0
 qbert08-0:40
 railblazerost-0:0
+rbgzero:0
+rbgzero:6
 remco_hextrade-1:0
 remco_hextrade-1:24
 renai_circulation_wip-0:19
@@ -387,6 +402,7 @@ rollpanda-2:24
 royegukimu-0:2
 seinsim-0:18
 shapeofmind-2:0:gruber_music
+shining2:4
 shootingstar-2:0
 shovelknightmusic-0:0
 slimeyjump-2:1
@@ -406,9 +422,11 @@ sprout_jam_edition-0:8
 squiddefence-4:1
 squiddefence-4:9
 stabbycrabby-0:48
+startrax_02:0
 statroulette-0:0
 stuck_in_the_sewers-6:1
 stuck_in_the_sewers-6:19
+subsurface:28
 suika_demake-9:1
 supercboss-1:0
 supercontrahot-0:0
@@ -417,7 +435,10 @@ terra_1cart-39:0
 terra_1cart-39:31
 tetrafabrika-2:0
 tetrafabrika-2:4
+tfl:0
 thelair-0:15:gruber_music
+thelasttaxiv1_0:0
+thelasttaxiv1_0:6
 thevisitor-0:0
 thevisitor-0:25
 thevisitor-0:41
@@ -465,17 +486,43 @@ zuduwoyoji-0:0
 zzzv_excitebike-0:0
 
 # christmas carts - uncomment around thanksgiving
+advent2024:0:smellyfishstiks
 aps-6:0
 bingle_jells:0
 decigobloopbloop-5:0
 decigobloopbloop-5:9
+eyebonechristmas:0
+eyebonechristmas:7
+eyebonechristmas:31
+eyebonechristmas:59
+freds72_islands:0:snabisch
+freds72_islands:8:snabisch
+freds72_islands:16:snabisch
 freds72_snow-3:0:gruber_music
+frosty3:0
+frosty3:8
+giftguardian:0
+holly_chasm:3
+holly_chasm:8
 jigsaw_xmas-5:36
 jumper-3:0
 jumper-3:10
 katamari_christmassy-1:0
 katamari_christmassy-1:8
+midnight_blue:0
+midnight_blue:8
 nacwseswahmmm-2:2
+shadowphiar_holiday_music:0
+shadowphiar_p8zznic_0:0
+shadowphiar_p8zznic_22:0
+shadowphiar_santaspresentpanic:1
+shadowphiar_santaspresentpanic:7
+shadowphiar_santaspresentpanic:14
+snowblowers:0
+snowkidz_battalion:54
+snowflakedesigner:0
 snowplower-1:0
+ufo_santa:0
+ufo_santa:12
 xmasfish-1:2
 xmaspatterns-3:0
