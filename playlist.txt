@@ -487,43 +487,43 @@ zuduwoyoji-0:0
 zzzv_excitebike-0:0
 
 # christmas carts - uncomment around thanksgiving
-advent2024:0:smellyfishstiks
-aps-6:0
-bingle_jells:0
-decigobloopbloop-5:0
-decigobloopbloop-5:9
-eyebonechristmas:0
-eyebonechristmas:7
-eyebonechristmas:31
-eyebonechristmas:59
-freds72_islands:0:snabisch
-freds72_islands:8:snabisch
-freds72_islands:16:snabisch
-freds72_snow-3:0:gruber_music
-frosty3:0
-frosty3:8
-giftguardian:0
-holly_chasm:3
-holly_chasm:8
-jigsaw_xmas-5:36
-jumper-3:0
-jumper-3:10
-katamari_christmassy-1:0
-katamari_christmassy-1:8
-midnight_blue:0
-midnight_blue:8
-nacwseswahmmm-2:2
-shadowphiar_holiday_music:0
-shadowphiar_p8zznic_0:0
-shadowphiar_p8zznic_22:0
-shadowphiar_santaspresentpanic:1
-shadowphiar_santaspresentpanic:7
-shadowphiar_santaspresentpanic:14
-snowblowers:0
-snowkidz_battalion:54
-snowflakedesigner:0
-snowplower-1:0
-ufo_santa:0
-ufo_santa:12
-xmasfish-1:2
-xmaspatterns-3:0
+# advent2024:0:smellyfishstiks
+# aps-6:0
+# bingle_jells:0
+# decigobloopbloop-5:0
+# decigobloopbloop-5:9
+# eyebonechristmas:0
+# eyebonechristmas:7
+# eyebonechristmas:31
+# eyebonechristmas:59
+# freds72_islands:0:snabisch
+# freds72_islands:8:snabisch
+# freds72_islands:16:snabisch
+# freds72_snow-3:0:gruber_music
+# frosty3:0
+# frosty3:8
+# giftguardian:0
+# holly_chasm:3
+# holly_chasm:8
+# jigsaw_xmas-5:36
+# jumper-3:0
+# jumper-3:10
+# katamari_christmassy-1:0
+# katamari_christmassy-1:8
+# midnight_blue:0
+# midnight_blue:8
+# nacwseswahmmm-2:2
+# shadowphiar_holiday_music:0
+# shadowphiar_p8zznic_0:0
+# shadowphiar_p8zznic_22:0
+# shadowphiar_santaspresentpanic:1
+# shadowphiar_santaspresentpanic:7
+# shadowphiar_santaspresentpanic:14
+# snowblowers:0
+# snowkidz_battalion:54
+# snowflakedesigner:0
+# snowplower-1:0
+# ufo_santa:0
+# ufo_santa:12
+# xmasfish-1:2
+# xmaspatterns-3:0
