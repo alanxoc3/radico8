@@ -1,15 +1,13 @@
 # radico8
 radico8 is a [web radio](http://radico8.xoc3.io/stream.ogg) that plays [pico-8](https://www.lexaloffle.com/pico-8.php) music.
 
-there was a youtube stream too, but as of 2025-10-06, it went down and i don't currently plan on bringing it back up. the youtube stream relies on ffmpeg, which has been straining my server.
+there was a youtube stream too, but as of 2025-10-06, it went down and i don't currently plan on bringing it back up. the youtube stream relies on ffmpeg, which has been straining my server (maybe a misconfiguration i dunno).
 
 ## submitting songs
 if you know some good pico-8 music, submit a pull request adding the lexaloffle cart-id and track to the [playlist.txt](./playlist.txt) file.
 
 ## issues
 you can submit a github issues for issues with the stream, feature suggestions, and bugfixes.
-
-youtube changes the video url everytime the stream goes down unless you use the link at the top of this document. so make sure you bookmark that link.
 
 giving credit to the actual artist of a song is a manual process. if a song is attributed to the wrong user please submit a pull request with the fix in the [playlist.txt](./playlist.txt) file.
 
@@ -56,7 +54,7 @@ radico8 is currently hosted on a tiny arch-linux linode instance along with some
 
 - the local-radio (pico8 running within a bash script)
 - the cart install script (timer that downloads cart data when playlist.txt updates)
-- the youtube stream (ffmpeg forwarding audio+picture into youtube stream)
+- the youtube stream (ffmpeg forwarding audio+picture into youtube stream) (currently disabled)
 - the webradio stream (ffmpeg forwarding audio to existing icecast installation
 
 radico8 could be setup on any linux machine, but it is a bit of a manual process. here are the general steps:
