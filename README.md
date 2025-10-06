@@ -1,7 +1,7 @@
 # radico8
 radico8 is a [web radio](http://radico8.xoc3.io/stream.ogg) that plays [pico-8](https://www.lexaloffle.com/pico-8.php) music.
 
-there was a youtube stream too, but as of 2025-10-06, it went down and i don't currently plan on bringing it back up. the youtube stream relies on ffmpeg, which has been straining my server (maybe a misconfiguration i dunno).
+there was a youtube stream too, but it went down sometime around 2025-10-06 and i don't currently plan on bringing it back up. the youtube stream relies on ffmpeg, which has been straining my server the past few years (maybe a misconfiguration i dunno).
 
 ## submitting songs
 if you know some good pico-8 music, submit a pull request adding the lexaloffle cart-id and track to the [playlist.txt](./playlist.txt) file.
