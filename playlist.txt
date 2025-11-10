@@ -257,6 +257,7 @@ fuz_v1-1:6
 ghostdogshort-1:0
 ghosthouse-0:13
 ghostship-2:24
+gihukareha-0:0 # toms demo by packbats
 gobhiratu-0:0
 golfsunday-0:0:gruber_music
 grandmothership-4:0
@@ -274,6 +275,7 @@ intoruins-2:0
 i_just_wanna_land_v3-2:0
 i_just_wanna_land_v3-2:10
 i_just_wanna_land_v3-2:20
+josewutezi-0:0 # fm piano demo by packbats
 jostitle-7:2  # jack of spades
 jostitle-7:7  # jack of spades
 jostitle-7:14 # jack of spades
@@ -329,6 +331,7 @@ newschoolreunion-0:0
 new_attack-2:0
 new_attack-2:18
 ne_on_demonei-0:0
+noending_by_packbats-1:0
 ntofebow-0:0
 obir5mw4pkfy9x0h8so2zdpic7kjdu:5
 olden_peak-0:0
@@ -339,6 +342,7 @@ oracles_inn-0:0
 orbys-0:0
 orbys-0:40
 orul-0:0
+packbats_laser_rot-0:0
 paperdalseifluffyfashion-2:0
 parumahpipoop-0:0 # kung poo fighter
 pengo-1:1
